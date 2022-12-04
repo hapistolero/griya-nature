@@ -68,6 +68,10 @@ export default function Header (){
                     padding-right: ${c}px;
 
                 }
+
+                .jli:hover{
+                    color:#FFD27D
+                }
                 `
             }
                 
