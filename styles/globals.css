@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&family=Averia+Serif+Libre:wght@300&family=Pattaya&display=swap');
+*{
+  box-sizing: border-box;
+ margin:0;
+ padding: 0;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.j {
+  background: url("../public/jumbotron/hero.jpg") no-repeat right, linear-gradient(#eb01a5, #d13531);
+  background-position: 0px -85vh;
+  background-size: cover;
+}
+
+.jt{
+  font-family: 'Averia Serif Libre'
+}
