@@ -14,10 +14,16 @@ body{
 
 .j {
   background: url("../public/jumbotron/hero.jpg") no-repeat right, linear-gradient(#eb01a5, #d13531);
-  background-position: 0px -85vh;
+  background-position: 0px -95vh;
   background-size: cover;
 }
 
 .jt{
   font-family: 'Averia Serif Libre'
+}
+
+.bn{
+  background-image: url('../public/benefits/benefits-shape.svg');
+  font-family: 'Averia Serif Libre';
+  text-shadow: 1px 0px 1px gray;
 }
