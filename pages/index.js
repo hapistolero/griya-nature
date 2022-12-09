@@ -56,22 +56,57 @@ export default function Home() {
         <h3 className='bn'>Best Services</h3>
         </div>
 
-      
-        
-
       </div>
-
-
-
-        
+       
         </div>
         
-        
+        <div className=' relative top-[-250px] -z-20 w-[100%] max-h-fit bg-[#395144]  p-[20%] '>
+          <h2 className='text-center text-4xl mb-12 text jt  text-[#FAD6A5]'>Products</h2>
+          <div className='flex justify-between'>
+          <div className='max-w-fit max-h-fit border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md'>            
+            <Image src='/products/drink.jpg' width={200} height={400}></Image>
+          </div>
+          <div className='max-w-fit max-h-fit border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md'>            
+            <Image src='/products/kitchen.jpg' width={200} height={400}></Image>
+          </div>
+          <div className='max-w-[200px] max-h-[400px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md unset-img'>            
+            <Image className='prodimg custom-img'  src='/products/gift.jpg' layout="fill" objectFit='cover' ></Image>
+          </div>
+
+          
+
+          </div>
+          <div className='flex justify-evenly mt-10'>
+            <div className='bg-[#FAD6A5] h-[15px] w-[15px] rounded-full shadow-black shadow-sm'></div>
+            <div className='bg-[#FAD6A5] h-[15px] w-[15px] rounded-full shadow-black shadow-sm'></div>
+            <div className='bg-[#FAD6A5] h-[15px] w-[15px] rounded-full shadow-black shadow-sm'></div>
+            <div className='bg-[#FAD6A5] h-[15px] w-[15px] rounded-full shadow-black shadow-sm'></div>
+            <div className='bg-[#FAD6A5] h-[15px] w-[15px] rounded-full shadow-black shadow-sm'></div>
+          </div>
+
+          <div>
+            <div className=''><h2 className='text-center text-4xl mb-12 text jt  text-[#FAD6A5] mt-60 underline'>Testimonials</h2></div>
+            <div className='h-[70vh] w-[140vh] border-[#FAD6A5]  mt-7 border-2 rounded-lg p-[10%]'>
+              <div className='max-w-[200px] max-h-[400px] border-2 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img '>
+              <Image className='prodimg custom-img' src='/testimonials/a.png' layout="fill" objectFit='cover'></Image>
+              </div>
+              <div>
+                <p className='text-[10000px]'>" kontol</p>
+              </div>
+              
+            </div>
+            <div></div>
+            <div></div>
+            
+          </div>
+         
+        </div>
       </div>    
+     
      
      </div>   
 
-     
+    
     
     </>
    

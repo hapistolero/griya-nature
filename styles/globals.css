@@ -10,6 +10,7 @@
 
 body{
   overflow-x: hidden;
+  background-color: #395144;
 }
 
 .j {
@@ -27,3 +28,12 @@ body{
   font-family: 'Averia Serif Libre';
   text-shadow: 1px 0px 1px gray;
 }
+
+.prodimg{
+  object-fit: fill;
+  position: relative !important;
+  height:  100% !important;
+  width: 100% !important;
+}
+
+

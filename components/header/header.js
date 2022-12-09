@@ -41,18 +41,12 @@ export default function Header (){
     
     return (
         <header className='flex sticky top-[0] w-full  h-[80px] z-50'>
-           
-            
-
-
-             
-
 
                 <div className='flex justify-start fixed top-[0]  w-[60%] h-[80px]'
                 style={{
                     left: `${a}px`,
                 }}>                     
-                 <ul className='flex justify-around fixed left-[-530px] bg-[#395144] text-[20px] h-[72.5px] pt-[20px]  text-[#FAD6A5] jt z-50'
+                 <ul className='flex justify-around fixed left-[-530px] bg-[#395144] text-[20px] h-[72.5px] pt-[20px]  text-[#FAD6A5] jt z-50 shadow-black shadow-sm'
              style={{
                 left: `${b}px`,
             }}
@@ -84,7 +78,7 @@ export default function Header (){
                 
             </style>
                 
-                <Image  className="relative left-[-20vh] top-[-3px] divImg z-50"  src='/navbar/navbarShape.svg' layout='contain' width={1000} height={10000}></Image>
+                <Image  className="relative left-[-20vh] top-[-3px] divImg "  src='/navbar/navbarShape.svg' layout='contain' width={1000} height={10000}></Image>
                     <div className='absolute flex  w-fit h-fit m-0 left-[0px]'>
                     <div>
                         
