@@ -84,19 +84,71 @@ export default function Home() {
             <div className='bg-[#FAD6A5] h-[15px] w-[15px] rounded-full shadow-black shadow-sm'></div>
           </div>
 
-          <div>
+          <div className='mx-auto'>
             <div className=''><h2 className='text-center text-4xl mb-12 text jt  text-[#FAD6A5] mt-60 underline'>Testimonials</h2></div>
-            <div className='h-[70vh] w-[140vh] border-[#FAD6A5]  mt-7 border-2 rounded-lg p-[10%]'>
-              <div className='max-w-[200px] max-h-[400px] border-2 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img '>
+            <div className='h-[70vh] w-[140vh] border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex '>
+              <div className='max-w-[200px] max-h-[400px] self-center border-2 mr-3 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img grow-[1] '>
               <Image className='prodimg custom-img' src='/testimonials/a.png' layout="fill" objectFit='cover'></Image>
               </div>
-              <div>
-                <p className='text-[10000px]'>" kontol</p>
-              </div>
-              
+              <div className='jt text-[#FAD6A5] grow-2 h-3[100%]'>
+                <span className='text-[150px] jt p-0 m-0 h-0 w-0 inline-block relative bottom-[50px]'>“</span>
+                <div className='relative top-[-100px]'>
+                <p className='inline'>John Doe - Customer</p><span> ⭐⭐⭐⭐⭐</span>
+                <h4 className='text-3xl'>Amazing Customer Services</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis, 
+                  nibh sit amet varius pulvinar, mauris enim rhoncus lorem, quis blandit mauris 
+                  nulla vitae mi. Phasellus ac neque justo.</p>
+                </div>          
+                <span className='text-[150px] jt p-0 m-0 relative left-[80%] bottom-[70%]'>”</span>
+                  <div className='flex relative bottom-[120%] w-[50%] '>
+                  <span className='flex bg-[#FAD6A5] h-2 w-6' ></span>
+                  <span className='flex bg-[#FAD6A5]  ml-1 h-2 w-3 '></span>
+                  <span className='flex bg-[#FAD6A5] ml-1 h-2 w-2 '></span>
+                  </div>                                                  
+              </div>              
             </div>
-            <div></div>
-            <div></div>
+            <div className='h-[70vh] w-[140vh] border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex '>
+              <div className='max-w-[200px] max-h-[400px] self-center border-2 mr-3 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img grow-[1] '>
+              <Image className='prodimg custom-img' src='/testimonials/a.png' layout="fill" objectFit='cover'></Image>
+              </div>
+              <div className='jt text-[#FAD6A5] grow-2 h-3[100%]'>
+                <span className='text-[150px] jt p-0 m-0 h-0 w-0 inline-block relative bottom-[50px]'>“</span>
+                <div className='relative top-[-100px]'>
+                <p className='inline'>John Doe - Customer</p><span> ⭐⭐⭐⭐⭐</span>
+                <h4 className='text-3xl'>Amazing Customer Services</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis, 
+                  nibh sit amet varius pulvinar, mauris enim rhoncus lorem, quis blandit mauris 
+                  nulla vitae mi. Phasellus ac neque justo.</p>
+                </div>          
+                <span className='text-[150px] jt p-0 m-0 relative left-[80%] bottom-[70%]'>”</span>
+                  <div className='flex relative bottom-[120%] w-[50%] '>
+                  <span className='flex bg-[#FAD6A5] h-2 w-6' ></span>
+                  <span className='flex bg-[#FAD6A5]  ml-1 h-2 w-3 '></span>
+                  <span className='flex bg-[#FAD6A5] ml-1 h-2 w-2 '></span>
+                  </div>                                                  
+              </div>              
+            </div>
+            <div className='h-[70vh] w-[140vh] border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex '>
+              <div className='max-w-[200px] max-h-[400px] self-center border-2 mr-3 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img grow-[1] '>
+              <Image className='prodimg custom-img' src='/testimonials/a.png' layout="fill" objectFit='cover'></Image>
+              </div>
+              <div className='jt text-[#FAD6A5] grow-2 h-3[100%]'>
+                <span className='text-[150px] jt p-0 m-0 h-0 w-0 inline-block relative bottom-[50px]'>“</span>
+                <div className='relative top-[-100px]'>
+                <p className='inline'>John Doe - Customer</p><span> ⭐⭐⭐⭐⭐</span>
+                <h4 className='text-3xl'>Amazing Customer Services</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis, 
+                  nibh sit amet varius pulvinar, mauris enim rhoncus lorem, quis blandit mauris 
+                  nulla vitae mi. Phasellus ac neque justo.</p>
+                </div>          
+                <span className='text-[150px] jt p-0 m-0 relative left-[80%] bottom-[70%]'>”</span>
+                  <div className='flex relative bottom-[120%] w-[50%] '>
+                  <span className='flex bg-[#FAD6A5] h-2 w-6' ></span>
+                  <span className='flex bg-[#FAD6A5]  ml-1 h-2 w-3 '></span>
+                  <span className='flex bg-[#FAD6A5] ml-1 h-2 w-2 '></span>
+                  </div>                                                  
+              </div>              
+            </div>
             
           </div>
          
