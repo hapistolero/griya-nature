@@ -27,6 +27,13 @@ body{
   background-image: url('../public/benefits/benefits-shape.svg');
   font-family: 'Averia Serif Libre';
   text-shadow: 1px 0px 1px gray;
+
+}
+
+.faq{
+  background-image: url('../public/faq/faq.svg');
+  background-size:cover;
+  background-position:center;
 }
 
 .prodimg{

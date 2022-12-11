@@ -86,7 +86,7 @@ export default function Home() {
 
           <div className='mx-auto'>
             <div className=''><h2 className='text-center text-4xl mb-12 text jt  text-[#FAD6A5] mt-60 underline'>Testimonials</h2></div>
-            <div className='h-[70vh] w-[140vh] border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex '>
+            <div className='h-[70vh] w-[140vh] border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md '>
               <div className='max-w-[200px] max-h-[400px] self-center border-2 mr-3 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img grow-[1] '>
               <Image className='prodimg custom-img' src='/testimonials/a.png' layout="fill" objectFit='cover'></Image>
               </div>
@@ -107,7 +107,7 @@ export default function Home() {
                   </div>                                                  
               </div>              
             </div>
-            <div className='h-[70vh] w-[140vh] border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex '>
+            <div className='h-[70vh] w-[140vh] border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md '>
               <div className='max-w-[200px] max-h-[400px] self-center border-2 mr-3 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img grow-[1] '>
               <Image className='prodimg custom-img' src='/testimonials/a.png' layout="fill" objectFit='cover'></Image>
               </div>
@@ -128,7 +128,7 @@ export default function Home() {
                   </div>                                                  
               </div>              
             </div>
-            <div className='h-[70vh] w-[140vh] border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex '>
+            <div className='h-[70vh] w-[140vh] border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md '>
               <div className='max-w-[200px] max-h-[400px] self-center border-2 mr-3 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img grow-[1] '>
               <Image className='prodimg custom-img' src='/testimonials/a.png' layout="fill" objectFit='cover'></Image>
               </div>
@@ -150,10 +150,52 @@ export default function Home() {
               </div>              
             </div>
             
+            
           </div>
          
         </div>
-      </div>    
+        <div className='relative bottom-[3%] bg-black max-w-[100%] h-fit max-h-fit flex'>
+              <div className='w-[50%] border border-1 border-[#FAD6A5] h-fit flex'>
+                <div className='w-[50%]'>
+                <Image className='prodimg custom-img'  src='/products/gift.jpg' layout="fill" objectFit='cover'></Image>
+                </div>
+                <div className='flex flex-col w-[50%]'>
+                <div className='h-[45vh]' >
+                <Image className='prodimg custom-img'  src='/products/gift.jpg' layout="fill" objectFit='cover'></Image>
+                </div>
+                <div className='h-[45vh]'>
+                <Image className='prodimg custom-img'  src='/products/gift.jpg' layout="fill" objectFit='cover'></Image>
+                </div>
+                </div>
+
+              </div>
+              <div className='w-[50%] grow-[1] max-h-fit border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt'>
+              <h2>About Us</h2>
+              <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis, 
+                  nibh sit amet varius pulvinar, mauris enim rhoncus lorem, quis blandit mauris 
+                  nulla vitae mi. Phasellus ac neque justo.
+              </p>
+              </div>                          
+            </div>
+            <div className='relative bottom-[3%] bg-black max-w-[100%] h-[170vh]'>
+              <h2 className='jt text-center text-[#FAD6A5] p-[50px] text-[40px] h-fit '>FAQ</h2>
+            <div className='relative bottom-[3%] bg-black  grid grid-cols-2 gap-[10%] px-7 py-5 '>
+              <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl'>How to Buy?</div>
+              <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl'>How to Buy?</div>
+              <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl'>How to Buy?</div>
+              <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl'>How to Buy?</div>
+              <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl'>How to Buy?</div>
+              <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl'>How to Buy?</div>
+        </div>         
+        <div className=' relative faq max-w-full jt h-[200px] top-[176px]'> </div>
+            </div>
+            
+
+            
+         
+      </div> 
+      
      
      
      </div>   
