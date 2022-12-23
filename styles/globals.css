@@ -13,6 +13,10 @@ body{
   background-color: #395144;
 }
 
+html{
+  overflow-x: hidden;
+}
+
 .j {
   background: url("../public/jumbotron/hero.jpg") no-repeat right, linear-gradient(#eb01a5, #d13531);
   background-position: 0px -95vh;

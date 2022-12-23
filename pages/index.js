@@ -25,7 +25,7 @@ export default function Home() {
               Aliquam erat volutpat.</p>
               <button className='bg-[#CFB997] hover:bg-[#AA8B56] font-bold py-2 px-4 rounded text-black w-[160px] h-[50px] jt'>Mulai</button>
       </div>
-      <div className='h-[10000px]'>
+      <div className='h-fit'>
          {/* benefits */}
       <div className= '  p-[23%] w-[150%] h-[200vh] bn bottom-[50px]  relative left-[-170px] bg-no-repeat text-lg font-bold'>
       <h2 className='text-4xl pl-[25%] mb-6'>Why Choose Our Store?</h2>
@@ -188,17 +188,69 @@ export default function Home() {
               <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl'>How to Buy?</div>
               <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl'>How to Buy?</div>
         </div>         
-        <div className=' relative faq max-w-full jt h-[200px] top-[176px]'> </div>
+        <div className=' relative faq max-w-full jt h-[200px] top-[270px] mb-[100px] '> </div>
+            </div>
+            <div className='mt-[25%]'>
+            <h2 className='text-center text-[#FAD6A5] jt text-[60px] underline '>Lets Gets Start</h2>
+            <div className='grid grid-cols-2'>
+            <div className='absolute max-w-full h-[100vh] flex '>
+              <div className='relative w-[50vw] h-[80vh] bottom-[120px] left-[50px]'>
+                <Image className='prodimg custom-img' src='/cta/teko.svg' layout="contane" width={1000} height={1000} objectFit='cover'></Image>
+                
+                </div>
+                <div className='w-[50vw]  '>
+                  <h3 className='text-4xl jt text-[#FAD6A5] p-11'>
+                  You can start shoping in your favorite marketplace.
+                  </h3>
+                  <div className='flex justify-between h-[150px]'>
+                    <div className='basis-1/4 p-[15px] px-[25px]'>
+                    <Image className='prodimg custom-img'  src='/start/shopee.png' layout="contain" width={100} height={100} objectFit='cover'></Image>
+                    </div>
+                    <div className='basis-1/4  p-[15px] px-[10px]'>
+                    <Image className='prodimg custom-img'  src='/start/lazada.png' layout="contain" width={100} height={100} objectFit='cover'></Image>
+                    </div>
+                    <div className='basis-1/4  p-[15px] px-[25px]'>
+                    <Image className='prodimg custom-img'  src='/start/tokped.png' layout="contain" width={100} height={100} objectFit='cover'></Image>
+                    </div>
+                    <div className='basis-1/4  p-[10px] px-[20px]'>
+                    <Image className='prodimg custom-img'  src='/start/tiktok.png' layout="contain" width={100} height={100} objectFit='cover'></Image>
+                    </div>
+                  </div>   
+                  <button className='bg-[#CFB997] hover:bg-[#AA8B56] font-bold py-2 px-4 rounded-xl text-black w-[160px] h-[50px] jt mx-[40%] border border-slate-900'>Email Us!</button>                
+              </div> 
+                                  
+            </div>   
+                                                    
+          </div> 
+
             </div>
             
-
-            
-         
-      </div> 
+            <div className=' relative w-[100%] h-[100px] bg-black mt-[50%] jt text-[#FAD6A5] px-[15px]'>
+              <div className='text-center text-lg'>contact us</div>
+              <div className='flex justify-around py-[20px]'>
+              <div className='flex'><Image className='' src='/footer/gmail.svg' width={20} height={20} ></Image>Griya.nature@gmail.com</div>
+              <div className='flex ml-[7%]'>
+              <Image className='ml-[20px]' src='/footer/instagram.svg' width={20} height={20} ></Image>
+              <Image className='ml-[20px]' src='/footer/tiktok.svg' width={20} height={20} ></Image>
+              <Image className='ml-[20px]' src='/footer/whatsapp.svg' width={20} height={20} ></Image>
+              </div>              
+              <div className='flex text-xs'>
+              <Image className='' src='/footer/location.svg' width={20} height={20} ></Image>
+              simowau indah blok a no 47
+              sepanjang taman sidoarjo.
+              </div>
+              </div>
+                
+              </div>   
       
+                                                         
+      </div>  
      
      
+                            
      </div>   
+      
+    
 
     
     
