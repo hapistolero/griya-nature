@@ -10,9 +10,13 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero-pattern': "linear-gradient(to right bottom, rgba('#7ed56f',0.8), rgba('#28b485',0.8)), url('./griya-nature/public/jumbotron/hero.jpg')",
-     },
+        'hero-pattern': "linear-gradient(to right bottom, rgba('#7ed56f',0.8), rgba('#28b485',0.8)), url('./griya-nature/public/jumbotron/hero.jpg')",        
+      },     
+     screens: {
+      'hp':'360px',
+     }
     },
+   
   },
   plugins: [],
 }

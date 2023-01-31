@@ -8,20 +8,44 @@
  padding: 0;
 }
 
-body{
+
+
+html {
+  position:fixed;
+  min-height:100%;
+    overflow-y:hidden;
+    overflow-x:hidden;
+  
+}
+
+body {
+
+  margin: 0;
+  width: 100vw; 
+  height: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   background-color: #395144;
+  
 }
-
-html{
-  overflow-x: hidden;
+.scroll{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x:hidden;
 }
-
 .j {
-  background: url("../public/jumbotron/hero.jpg") no-repeat right, linear-gradient(#eb01a5, #d13531);
-  background-position: 0px -95vh;
+  background: url("../public/jumbotron/hero.jpg") no-repeat right, linear-gradient(to left, transparent 50%, black 100%);
+  background-position: 0px 50%;
+
   background-size: cover;
 }
+
+
 
 .jt{
   font-family: 'Averia Serif Libre'
@@ -47,4 +71,21 @@ html{
   width: 100% !important;
 }
 
+
+@media only screen and (max-width:768px){
+  .j {
+    background: url("../public/jumbotron/hero.jpg") no-repeat right, linear-gradient(to left, transparent 50%, black 100%);
+  background-position: 0% 0%;
+  background-size: cover;
+
+}
+}
+@media only screen and (max-width:360px){
+  .j {
+  background: url("../public/jumbotron/hero.jpg") no-repeat right, linear-gradient(to bottom, transparent 50%, black 100%);
+  background-position: 0px 50%;
+
+  background-size: cover;
+}
+}
 
