@@ -15,7 +15,9 @@ html {
   min-height:100%;
     overflow-y:hidden;
     overflow-x:hidden;
-  
+   
+
+   
 }
 
 body {
@@ -26,7 +28,7 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  background-color: #395144;
+  background-color: #395144; 
   
 }
 .scroll{
@@ -37,6 +39,7 @@ body {
   bottom: 0;
   overflow-y: auto;
   overflow-x:hidden;
+  scroll-behavior: smooth !important;
 }
 .j {
   background: url("../public/jumbotron/hero.jpg") no-repeat right, linear-gradient(to left, transparent 50%, black 100%);

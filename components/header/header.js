@@ -1,4 +1,5 @@
 import Image from 'next/image'
+// import Link  from 'next/link'
 import Link from 'next/link'
 import { useEffect, useState } from "react";
 
@@ -16,6 +17,24 @@ export default function Header ({scrollPosition}){
         setSizeX(window.innerWidth)
       }
 
+      const handleNavigationClick = (event) => {
+        event.preventDefault();
+        const targetId = event.target.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+      
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: 'smooth',
+        });
+        targetElement.classList.add('scroll-to');
+      };
+
+      const navLinks = document.querySelectorAll('Link');
+navLinks.forEach((link) => {
+  link.addEventListener('click', handleNavigationClick);
+});
+      
+
   
       // just trigger this so that the initial state 
       // is updated as soon as the component is mounted
@@ -25,17 +44,19 @@ export default function Header ({scrollPosition}){
   
       window.addEventListener("scroll", handleScroll);
       window.addEventListener('resize', handleResizeX)
+    
       return () => {
+        
         window.removeEventListener("scroll", handleScroll);
         window.removeEventListener('resize', handleResizeX)
+        
       
         
         
       };
     }
     )
-
-   console.log(sizeX);
+    
     let a= scrollY*2.4;
     let b= -530-(-scrollY);
     let c= scrollY/10;
@@ -68,13 +89,13 @@ export default function Header ({scrollPosition}){
                 
             }}
              >
-                <li className='jli'><Link href='/'>Home</Link></li>
-                <li className='jli'><Link href='/'>Benefits</Link></li>
-                <li className='jli'><Link href='/'>Products</Link></li>
-                <li className='jli'><Link href='/'>Testimonials</Link></li>
-                <li className='jli'><Link href='/'>AboutUs</Link></li>
-                <li className='jli'><Link href='/'>Faq</Link></li>
-                <li className='jli'><Link href='/'>LetsGo!</Link></li>
+                <li  className='jli'><Link href='#jumboTron' >Home</Link></li>
+                <li className='jli'><Link href='#benefits' >Benefits</Link></li>
+                <li className='jli'><Link  href='#products' onClick={()=>document.querySelector('#products').scrollIntoView({behaviour:'smooth'})}  > Products</Link></li>
+                <li className='jli'><Link href='#testimonial'  >Testimonials</Link></li>
+                <li className='jli'><Link href='#about'  >AboutUs</Link></li>
+                <li className='jli'><Link  href='#faq' >Faq</Link></li>
+                <li className='jli'><Link  href='#' >LetsGo!</Link></li>
             </ul> 
             <style jsx>{
                 `
@@ -97,6 +118,10 @@ export default function Header ({scrollPosition}){
                   height:60px;
                   width:60px;
                 }
+
+                .scroll-to {
+                    transition: all 5s ease-in-out;
+                  }
                 
                
                 `
