@@ -51,16 +51,16 @@ export default function Testi({scrollPosition}){
     })
     return (
         <>
-        <div id='testimonial' className={`relative xl:top-[-600px] md:top-[-350px] sm:top-[-270px] -z-20 w-[100%] max-h-fit bg-[rgb(57,81,68)]  xl:md:p-[20%] md:p-[0px] xl:mt-[0px] sm:mt-[180px] hp:top-[-200px] divTesti`}>
+        <div id='testimonial' className={`relative xl:top-[-890px] md:top-[-350px] sm:top-[-270px] -z-20 w-[100%] max-h-fit bg-[rgb(57,81,68)]  xl:md:p-[20%] md:p-[0px] xl:mt-[0px] sm:mt-[180px] hp:top-[-50px] divTesti`}>
 
         <div className='mx-auto   max-h-fit max-w-[140vh]  flex flex-col center '>
             <div className=''><h2 className='text-center text-4xl mb-12 text jt  text-[#FAD6A5]  underline'>Testimonials</h2></div>
 
-            <div ref={divRef} className=' md:max-h-[70vh]  md:max-w-[95vw] sm:max-h-[85vh] hp:max-h-[85vh]   sm:max-w-[80vw] hp:max-w-[90vw] hp:mx-auto sm:mx-auto border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md md:flex-row sm:flex-col  hp:flex-col left '>
+            <div ref={divRef} className='xl:relative xl:min-h-[100%] md:min-h-[70vh]  md:max-w-[95vw] sm:min-h-[85vh] hp:max-h-[85vh]   sm:max-w-[80vw] hp:max-w-[90vw] hp:mx-auto sm:mx-auto border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md md:flex-row sm:flex-col  hp:flex-col left '>
               <div className='md:max-w-[200px] md:max-h-[400px] self-center border-2 mr-3 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img md:xl:grow-[1] md:w-[150%] sm:max-w-[150px] md:relative sm:absolute sm:max-h-[300px] hp:max-h-[130px] hp:absolute hp:max-w-[130px]'>
               <Image className='prodimg custom-img' src='/testimonials/a.png' layout="fill" objectFit='cover'></Image>
               </div>
-              <div className='jt text-[#FAD6A5] md:xl:grow-2 h-3[100%] xl:bottom-4 xl:relative sm:static md:top-[0%] md:mt-[5%] sm:mt-[65%] hp:mt-[60%] '>
+              <div className='jt xl:static xl:pt-[2vh]  text-[#FAD6A5] md:xl:grow-2 h-3[100%] xl:bottom-4 xl:relative sm:static md:top-[0%] md:mt-[5%] sm:mt-[65%] hp:mt-[60%] '>
                 <span className='md:xl:text-[150px] md:text-[140px] jt p-0 m-0 h-0 w-0 inline-block relative bottom-[50px] md:bottom-[85px] sm:pb-[0px] sm:relative sm:bottom-[120px] hp:relative hp:bottom-[70px] hp:text-[80px] sm:text-[80px] '>“</span>
                 <div className='relative top-[-100px] sm:top-[-150px] hp:text-center md:text-left'>
                 <p className='inline hp:text-2xl  '>John Doe - Customer</p><span className='hp:text-xl'> ⭐⭐⭐⭐⭐</span>
@@ -81,11 +81,11 @@ export default function Testi({scrollPosition}){
                                                                  
               </div>              
             </div>
-            <div ref={divRef2} className='md:max-h-[70vh]  md:max-w-[95vw] sm:max-h-[85vh] hp:max-h-[85vh]   sm:max-w-[80vw] hp:max-w-[90vw] hp:mx-auto sm:mx-auto border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md md:flex-row sm:flex-col hp:flex-col right'>
+            <div ref={divRef2} className=' xl:min-h-fit md:min-h-[70vh]  md:max-w-[95vw] sm:min-h-[85vh] hp:max-h-[85vh]   sm:max-w-[80vw] hp:max-w-[90vw] hp:mx-auto sm:mx-auto border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md md:flex-row sm:flex-col hp:flex-col right'>
               <div className='md:max-w-[200px] md:max-h-[400px] self-center border-2 mr-3 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img md:xl:grow-[1] md:w-[150%] sm:max-w-[150px] md:relative sm:absolute sm:max-h-[300px] hp:max-h-[130px] hp:absolute hp:max-w-[130px]'>
               <Image className='prodimg custom-img' src='/testimonials/a.png' layout="fill" objectFit='cover'></Image>
               </div>
-              <div className='jt text-[#FAD6A5] md:xl:grow-2 h-3[100%] xl:bottom-4 xl:relative sm:static md:top-[0%] md:mt-[5%] sm:mt-[65%] hp:mt-[60%]'>
+              <div className='jt xl:static xl:pt-[4%] text-[#FAD6A5] md:xl:grow-2 h-3[100%] xl:bottom-4 xl:relative sm:static md:top-[0%] md:mt-[5%] sm:mt-[65%] hp:mt-[60%]'>
                 <span className='md:xl:text-[150px] md:text-[140px] jt p-0 m-0 h-0 w-0 inline-block relative bottom-[50px] md:bottom-[85px] sm:pb-[0px] sm:relative sm:bottom-[120px] hp:relative hp:bottom-[70px] hp:text-[80px] sm:text-[80px]'>“</span>
                 <div className='relative top-[-100px] sm:top-[-150px] hp:text-center md:text-left'>
                 <p className='inline hp:text-2xl md:text-left'>John Doe - Customer</p><span className='hp:text-xl'> ⭐⭐⭐⭐⭐</span>
@@ -104,11 +104,11 @@ export default function Testi({scrollPosition}){
                                                               
               </div>              
             </div>
-            <div ref={divRef3} className='md:max-h-[70vh]  md:max-w-[95vw] sm:max-h-[85vh] hp:max-h-[85vh]   sm:max-w-[80vw] hp:max-w-[90vw] hp:mx-auto sm:mx-auto border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md md:flex-row sm:flex-col hp:flex-col left'>
+            <div ref={divRef3} className=' xl:min-h-fit md:min-h-[70vh]  md:max-w-[95vw] sm:min-h-[85vh] hp:max-h-[85vh]   sm:max-w-[80vw] hp:max-w-[90vw] hp:mx-auto sm:mx-auto border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md md:flex-row sm:flex-col hp:flex-col left'>
               <div className='md:max-w-[200px] md:max-h-[400px] self-center border-2 mr-3 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img md:xl:grow-[1] md:w-[150%] sm:max-w-[150px] md:relative sm:absolute sm:max-h-[300px] hp:max-h-[130px] hp:absolute hp:max-w-[130px]'>
               <Image className='prodimg custom-img' src='/testimonials/a.png' layout="fill" objectFit='cover'></Image>
               </div>
-              <div className='jt text-[#FAD6A5] md:xl:grow-2 h-3[100%] xl:bottom-4 xl:relative sm:static md:top-[5%] md:mt-[5%] sm:mt-[65%] hp:mt-[60%] '>
+              <div className='jt   xl:static xl:pt-[4%] text-[#FAD6A5] md:xl:grow-2 h-3[100%] xl:bottom-4 xl:relative sm:static md:top-[5%] md:mt-[5%] sm:mt-[65%] hp:mt-[60%] '>
                 <span className='md:xl:text-[150px] md:text-[140px] jt p-0 m-0 h-0 w-0 inline-block relative bottom-[50px] md:bottom-[85px] sm:pb-[0px] sm:relative sm:bottom-[120px] hp:relative hp:bottom-[70px] hp:text-[80px] sm:text-[80px]'>“</span>
                 <div className='relative top-[-100px] sm:top-[-150px] hp:text-center md:text-left'>
                 <p className='inline hp:text-2xl md:text-left'>John Doe - Customer</p><span className='hp:text-xl'> ⭐⭐⭐⭐⭐</span>

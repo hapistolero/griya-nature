@@ -49,9 +49,9 @@ export default function Benefits ({scrollPosition}) {
     
   return (
     <>
-      <div  className={'xl:h-full xl:mb-[210px] sm:h-full sm:mb-[590px] hp:h-fit hp:mb-0 scroll-smooth '}>
+      <div  className={'xl:h-full xl:relative xl:mt-[25vh] sm:h-full sm:mb-[590px] hp:h-fit hp:mb-0 scroll-smooth '}>
          {/* benefits */}
-       <div id='benefits' className= 'md:p-[23%] w-[150%]  sm:h-[215vh] hp:h-[2100px] md:w-[150%] xl:bg-contain  bn xl:relative xl:bottom-[650px] md:bottom-[410px]   relative left-[-170px] bg-no-repeat text-lg font-bold sm:bottom-[375px]  hp:bottom-[330px]   md:pt-[25%] sm:mt-[160px]  hp:bg-cover benefCont  '>
+       <div id='benefits' className= 'md:p-[23%] w-[150%]  sm:h-[215vh] hp:h-[2100px] md:w-[150%] xl:bg-contain  bn xl:absolute xl:bottom-[0px] md:bottom-[410px]   relative left-[-170px] bg-no-repeat text-lg font-bold sm:bottom-[375px]  hp:bottom-[330px]   md:pt-[25%] sm:mt-[160px]  hp:bg-cover benefCont  '>
 
         <style jsx>{
             `

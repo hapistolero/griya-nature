@@ -46,7 +46,7 @@ export default function About() {
 
     return(
 <>
-<div id="about" className='relative bottom-[3%] bg-black max-w-[100%] h-fit max-h-fit flex hp:flex-col sm:flex-row'>
+<div id="about" className='static bg-black max-w-[100%] h-fit max-h-fit flex hp:flex-col sm:flex-row'>
 <div className='w-[50%] border border-1 border-[#FAD6A5] h-fit flex hp:w-[100%] sm:mx-auto'>
                 <div className='w-[50%]' style={
                    {

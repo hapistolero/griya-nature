@@ -285,12 +285,12 @@ const rdr5 = useRef(null);
     }
     return (
 <>
-        <div id='products' className='relative md:top-[-350px] sm:top-[-270px] -z-20 w-[100%] max-h-fit bg-[rgb(57,81,68)]  xl:md:p-[20%] md:p-[0px] xl:mt-[0px] sm:mt-[180px] hp:top-[-200px] productText '>
+        <div id='products' className='relative xl:top-[-650px] md:top-[-280px] sm:top-[-270px] hp:top-[-300px] -z-20 w-[100%] max-h-fit bg-[rgb(57,81,68)]  xl:md:p-[20%] md:p-[0px] xl:mt-[0px] sm:mt-[180px] hp:top-[-200px] productText '>
         <h2 className='text-center text-4xl mb-12 text jt  text-[#FAD6A5]  '>Products</h2>
           <div className=' flex xl:md:justify-between md:justify-around sm:p-[3%] sm:mx-auto jt'>
-          <div ref={divRef} className={`max-w-[200px] max-h-[400px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md sm:m-[1%] hp:hidden sm:inline-flex  grow-1  productImage`}
+          <div ref={divRef} className={`max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md sm:m-[1%] hp:hidden sm:inline-flex  grow-1  productImage`}
           >  
-          <div className={`absolute text-[#FAD6A5] z-20 pt-[90%] text-center w-[100%] h-[100%]   hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100 ease-in-out `}>
+          <div className={`absolute text-[#FAD6A5] z-20  flex flex-col items-center justify-center text-center w-[100%] h-[100%]   hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100 ease-in-out `}>
             <h3 className={'text-3xl '}>{productImage[currentSlide1].name}</h3>
             <p className='text-xl'>{productImage[currentSlide1].price}</p>
             </div>          
@@ -298,18 +298,18 @@ const rdr5 = useRef(null);
          
             
           </div>
-          <div ref={divRef2} className={'max-w-[200px] max-h-[400px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md md:mx-[10px] sm:m-[1%] hp:mx-auto  grow-1  productImage'}>            
-          <div className={`absolute text-[#FAD6A5] z-20  pt-[90%] text-center w-[100%] h-[100%]  hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100  `}>
+          <div ref={divRef2} className={'max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md md:mx-[10px] sm:m-[1%] hp:mx-auto  grow-1  productImage'}>            
+          <div className={`absolute text-[#FAD6A5] z-20   flex flex-col items-center justify-center text-center w-[100%] h-[100%]  hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100  `}>
           <h3 className={'text-3xl'}>{productImage[currentSlide2].name}</h3>
             <p className='text-xl'>{productImage[currentSlide2].price}</p>
           </div>
             <Image src={productImage[currentSlide2].url} className={` prodimg custom-img img bg-gradient-to-b from-black `} width={200} height={400} alt='2'></Image>
           </div>
           
-          <div ref={divRef3} className={'max-w-[200px] max-h-[400px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md unset-img sm:m-[1%] hp:hidden sm:inline-flex grow-1   productImage'}>  {
+          <div ref={divRef3} className={'max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md unset-img sm:m-[1%] hp:hidden sm:inline-flex grow-1   productImage'}>  {
 
           }    
-          <div className={`absolute text-[#FAD6A5] z-20 pt-[90%] text-center w-[100%] h-[100%]  hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100`}>
+          <div className={`absolute text-[#FAD6A5] z-20   flex flex-col items-center justify-center text-center w-[100%] h-[100%]  hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100`}>
           <h3 className={'text-3xl'}>{productImage[currentSlide3].name}</h3>
             <p className='text-xl'>{productImage[currentSlide3].price}</p>
           </div>      

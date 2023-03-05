@@ -7,7 +7,7 @@ export default function Contact(){
 
     return(
         <>
-        <div id='contact' className=' relative w-[100%] h-[100px] bg-black mt-[0%] jt text-[#FAD6A5] px-[15px] sm:h-fit sm:top-0 hp:top-[550px] hp:h-fit  '>
+        <div id='contact' className='xl:relative xl:top-[1180px]  w-[100%] h-[100px] bg-black mt-[0%] jt text-[#FAD6A5] px-[15px] sm:h-fit sm:top-0 hp:relative hp:top-[250px] hp:h-fit  '>
               <div className='text-center text-lg'>contact us</div>
               <div className='flex justify-around py-[20px] md:flex-row sm:flex-col hp:flex-col'>
               <div className='flex xl:md:pl-[0%] md:ml-[2%] md:mb-[0px] md:pt-2 sm:mb-[10px] md:text-base marker:sm:text-lg'><Image className='' src='/footer/gmail.svg' width={20} height={20} ></Image>Griya.nature@gmail.com</div>

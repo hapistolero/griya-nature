@@ -53,7 +53,7 @@ export default function Faq({scrollPosition}) {
 
     return(
         <>
-        <div id='faq' className='relative bottom-[3%] bg-black max-w-[100%]  xl:md:h-[170vh] divFaq'>
+        <div id='faq' className='xl:relative  faq bg-contain   xl:h-[220vh]  max-w-[100%]  md:h-[170vh] hp:h-[120vh] divFaq'>
               <h2 className='jt text-center text-[#FAD6A5] p-[50px] text-[40px] h-fit '>FAQ</h2>
             <div className='relative bottom-[3%] bg-black  grid grid-cols-2 gap-[10%] px-7 py-5 '>
               <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
@@ -62,8 +62,10 @@ export default function Faq({scrollPosition}) {
               <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
               <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp '>How to Buy?</div>
               <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
+              {/* <div className='relative bg-white  faq max-w-full jt h-[200px] xl:top-[270px] md:top-[198px] mb-[100px] sm:top-[198px] sm:bg-cover hp:top-[125px] hp:bg-contain hp:bg-no-repeat bg:h-[100px]  '> </div> */}
         </div>         
-        <div className=' relative faq max-w-full jt h-[200px] xl:top-[275px] md:top-[198px] mb-[100px] sm:top-[198px] sm:bg-cover hp:top-[125px] hp:bg-contain hp:bg-no-repeat bg:h-[100px]  '> </div>
+       
+            
             </div>
 
             <style jsx>
@@ -106,6 +108,8 @@ export default function Faq({scrollPosition}) {
                         transform: translateX(100%);
                         transition: opacity 1s ease-in-out, transform 1s ease-in-out;
                     }
+
+                    
                     `
                 }
             </style>

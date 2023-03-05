@@ -10,6 +10,7 @@ import About from '../components/about/about.js'
 import Faq from '../components/faq/faq.js'
 import Start from '../components/start/start.js'
 import Contact from '../components/contact us/contact.js'
+import Modal from '../components/modalBox/modal.js'
 
 const handleClick = (event) =>{
   
@@ -40,7 +41,7 @@ export default function Home() {
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </Head>
      
-     <div class="scroll scroll-smooth " ref={scrollY2} onScroll={handleScroll} style={{scrollBehavior:'smooth'}}>
+     <div class="scroll  scroll-smooth " ref={scrollY2} onScroll={handleScroll} style={{scrollBehavior:'smooth'}}>
      <Header scrollPosition={scrollPosition}  class="scroll scroll-smooth " ref={scrollY2} onScroll={handleScroll} style={{scrollBehavior:'smooth'}}/>
     
        {/* jumbotron */}
@@ -48,17 +49,22 @@ export default function Home() {
       <Benefits scrollPosition={scrollPosition}></Benefits>                                      
       <ProductsComponent scrollPosition={scrollPosition}/>
      <Testi scrollPosition={scrollPosition}/> 
-     <div className={`xl:relative xl:bottom-[600px]`}>
+     <div className='xl:absolute xl:h-fit xl:top-[4300px]'>
      <About className={``}/>      
       <Faq scrollPosition={scrollPosition}/>
+
+     </div>
+     
       
-      </div>  
+      
 
-      <Start scrollPosition={scrollPosition}/>
+<Start scrollPosition={scrollPosition}/>
 
-     
-     
-      <Contact/>
+          
+<Contact/>
+
+<div></div>
+
 
 
        
