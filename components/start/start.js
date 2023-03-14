@@ -45,7 +45,7 @@ export default function Start({scrollPosition}){
   })
     return(
         <>
-        <div id='start' className={`xl:relative xl:top-[900px] bg-gradient-to-b from-[#395144] via-[#4E6C50] to-[#395144]  md:bottom-[-30px] md:mb-[10%] sm:relative sm:top-[50px] hp:bottom-[-50px] xl:bottom-[0px] h-[100%]  mt-[50px] divCont`}>
+        <div id='start' className={`xl:relative xl:top-[1100px]  bg-gradient-to-b from-[#395144] via-[#4E6C50] to-[#395144]  md:bottom-[-30px] md:mb-[5%] sm:relative sm:top-[50px] sm:max-h-[80vh] hp:bottom-[-50px] xl:bottom-[0px] h-[100%]   xl:bg-white landscape:max-h-[1000vh] landscape:mb-[0px] mbAdd  divCont`}>
         <div className='xl:relative  '>
             <h2 className='text-center text-[#FAD6A5] jt md:text-[60px] sm:text-[50px] underline hp:text-[30px] '>Lets Gets Start</h2>
             <div className='grid grid-cols-2 '>
@@ -107,6 +107,12 @@ export default function Start({scrollPosition}){
         transform:translateX(0);
         transition:opacity 1s ease-in-out, transform 1s ease-in-out;
 
+      }
+
+      @media screen and (height: 276px) {
+        .mbAdd{
+         margin-bottom: 50vh !important;
+        }
       }
 
       `

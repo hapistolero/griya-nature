@@ -51,12 +51,12 @@ export default function Testi({scrollPosition}){
     })
     return (
         <>
-        <div id='testimonial' className={`relative xl:top-[-890px] md:top-[-350px] sm:top-[-270px] -z-20 w-[100%] max-h-fit bg-[rgb(57,81,68)]  xl:md:p-[20%] md:p-[0px] xl:mt-[0px] sm:mt-[180px] hp:top-[-50px] divTesti`}>
+        <div id='testimonial' className={`relative xl:top-[-890px] md:top-[-350px] sm:top-[-270px] -z-20 w-[100%] max-h-fit bg-[rgb(57,81,68)]  xl:md:p-[20%] md:p-[0px] xl:mt-[0px] sm:mt-[180px] hp:top-[-50px] divTesti border-white`}>
 
         <div className='mx-auto   max-h-fit max-w-[140vh]  flex flex-col center '>
             <div className=''><h2 className='text-center text-4xl mb-12 text jt  text-[#FAD6A5]  underline'>Testimonials</h2></div>
 
-            <div ref={divRef} className='xl:relative xl:min-h-[100%] md:min-h-[70vh]  md:max-w-[95vw] sm:min-h-[85vh] hp:max-h-[85vh]   sm:max-w-[80vw] hp:max-w-[90vw] hp:mx-auto sm:mx-auto border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md md:flex-row sm:flex-col  hp:flex-col left '>
+            <div ref={divRef} className='xl:relative xl:min-h-[100%] md:min-h-[70vh]  md:max-w-[95vw] sm:min-h-[85vh] hp:max-h-[85vh]   sm:max-w-[80vw] hp:max-w-[90vw] hp:mx-auto sm:mx-auto border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md md:flex-row sm:flex-col  hp:flex-col landscape:max-h-fit left  '>
               <div className='md:max-w-[200px] md:max-h-[400px] self-center border-2 mr-3 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img md:xl:grow-[1] md:w-[150%] sm:max-w-[150px] md:relative sm:absolute sm:max-h-[300px] hp:max-h-[130px] hp:absolute hp:max-w-[130px]'>
               <Image className='prodimg custom-img' src='/testimonials/a.png' layout="fill" objectFit='cover'></Image>
               </div>
@@ -81,7 +81,7 @@ export default function Testi({scrollPosition}){
                                                                  
               </div>              
             </div>
-            <div ref={divRef2} className=' xl:min-h-fit md:min-h-[70vh]  md:max-w-[95vw] sm:min-h-[85vh] hp:max-h-[85vh]   sm:max-w-[80vw] hp:max-w-[90vw] hp:mx-auto sm:mx-auto border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md md:flex-row sm:flex-col hp:flex-col right'>
+            <div ref={divRef2} className=' xl:min-h-fit md:min-h-[70vh]  md:max-w-[95vw] sm:min-h-[85vh] hp:max-h-[85vh]   sm:max-w-[80vw] hp:max-w-[90vw] hp:mx-auto sm:mx-auto border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md md:flex-row sm:flex-col hp:flex-col landscape:max-h-fit right'>
               <div className='md:max-w-[200px] md:max-h-[400px] self-center border-2 mr-3 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img md:xl:grow-[1] md:w-[150%] sm:max-w-[150px] md:relative sm:absolute sm:max-h-[300px] hp:max-h-[130px] hp:absolute hp:max-w-[130px]'>
               <Image className='prodimg custom-img' src='/testimonials/a.png' layout="fill" objectFit='cover'></Image>
               </div>
@@ -104,7 +104,7 @@ export default function Testi({scrollPosition}){
                                                               
               </div>              
             </div>
-            <div ref={divRef3} className=' xl:min-h-fit md:min-h-[70vh]  md:max-w-[95vw] sm:min-h-[85vh] hp:max-h-[85vh]   sm:max-w-[80vw] hp:max-w-[90vw] hp:mx-auto sm:mx-auto border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md md:flex-row sm:flex-col hp:flex-col left'>
+            <div ref={divRef3} className=' xl:min-h-fit md:min-h-[70vh]  md:max-w-[95vw] sm:min-h-[85vh] hp:max-h-[85vh]   sm:max-w-[80vw] hp:max-w-[90vw] hp:mx-auto sm:mx-auto border-[#FAD6A5]  mt-7 border-2 rounded-xl p-[10%] flex shadow-black shadow-md md:flex-row sm:flex-col hp:flex-col landscape:max-h-fit left'>
               <div className='md:max-w-[200px] md:max-h-[400px] self-center border-2 mr-3 border-[#FAD6A5] rounded-full bg-black overflow-hidden shadow-black shadow-md unset-img md:xl:grow-[1] md:w-[150%] sm:max-w-[150px] md:relative sm:absolute sm:max-h-[300px] hp:max-h-[130px] hp:absolute hp:max-w-[130px]'>
               <Image className='prodimg custom-img' src='/testimonials/a.png' layout="fill" objectFit='cover'></Image>
               </div>

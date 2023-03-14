@@ -7,6 +7,7 @@ export default function Jumbotron () {
     )
 
     const[open, setOpen] = useState(false)
+    const [isLandscape, setIsLandscape] = useState(false);
 
   
 
@@ -21,15 +22,29 @@ export default function Jumbotron () {
             setBackgroundImage(images[randomIndex])
 
         },3000)
-       
 
-        return () => clearInterval(intervalId)
+        function handleOrientationChange() {
+            // alert('tinggi : ' +  window.innerHeight + ' lebar : '+window.innerWidth)
+          
+        }
+
+        handleOrientationChange();
+
+
+        window.addEventListener("resize", handleOrientationChange);
+
+
+        return () => {
+          clearInterval(intervalId)
+          window.removeEventListener("resize", handleOrientationChange);
+
+        }
 
     },[])
 
   return (
     <>
-    <div id="jumboTron" name="jumboTron" className='top-0 absolute max-w-[100%] sm:max-h-[150vh] bg-gradient-to-r from-black  bg-blend-multiply    hp:bg-center hp:max-h-fit md:bg-[left_bottom_70%] sm:bg-[left_bottom_60%] xl:bg-[left_bottom_60%] hp:h-[100%] hp:bg-fixed hp:relative backgroundImage md:h-[100vh] xl:h-[200vh] overflow-hidden scroll-mt-10 bgp ' style={
+    <div id="jumboTron" name="jumboTron" className={`top-0 absolute max-w-[100%] sm:max-h-[90vh]  bg-gradient-to-r from-black  bg-blend-multiply    hp:bg-center hp:max-h-fit md:bg-[left_bottom_70%] sm:bg-[left_bottom_60%] xl:bg-[left_bottom_60%] hp:h-[100%] hp:bg-fixed hp:relative backgroundImage md:h-[100vh]  xl:mb-[113vh] md:mb-[0vh]  md:h-fit xl:pb-[100vh] overflow-hidden scroll-mt-10 bgp  pClear  border-white  `} style={
         {backgroundImage: ` url(${backgroundImage})`,
         backgroundSize: "cover",       
         transition: "background-image 0.5s ease-in-out",
@@ -37,7 +52,7 @@ export default function Jumbotron () {
     } >
         
         
-      <div className=' pl-[20px] md:xl:pt-[35vh] md:pt-[19vh] sm:pt-[16vh] font-[Averia Sans Libre] sm:w-[50%]  hp:w-[100%] sm:mt-[0%] sm:my-[5%] hp:mt-[5%] sm:text-left hp:text-center xl:mt-0  hp:absolute j hp:py-12 sm:py-[1000vh] sm:top-0 hp:bottom-0  '>
+      <div className=' pl-[20px] md:xl:pt-[35vh] hp:landscape:px-auto md:pt-[19vh] sm:pt-[16vh] font-[Averia Sans Libre] sm:w-[50%]  hp:w-[100%] sm:mt-[0%] sm:my-[5%] hp:mt-[5%] sm:text-left hp:text-center xl:mt-0  hp:absolute j hp:py-12 sm:py-[1000vh] xl:h-full hp:landscape:h-full sm:top-0 hp:bottom-0 fixText '>
       <h1 className='text-[#F2EAE0] md:xl:text-[50px] md:text-[35px] sm:text-[30px] font-[Averia Serif Libre] jt hp:text-[22px] hp:w-[100%] drop-shadow-md sm:mt-0 hp:mt-[100%] xl:pt-0 sm:pt-[30%] md:pt-[15%]'>The Magic Of Kitchen, Herbal Drink And Gift</h1>
       <p className='text-[#F2EAE0] font-[Averia Serif Libre] jt md:xl:text-base md:text-lg sm:text-base hp:text-base hp:w-[100%] drop-shadow-md shadow-white xl:text-2xl sm:right-0 hp:right-[5px] hp:relative  ' >Berikan kenangan, kesehatan dan waktu makan malam yang berarti bagi orang terkasih.</p>
               <button onClick={()=> setOpen(true)} className='bg-[#CFB997] hover:bg-[#AA8B56] font-bold py-2 px-4 rounded text-black md:xl:w-[160px] md:xl:h-[50px] md:w-[120px]  md:h-[45px] jt  hp:w-[50%] m-2 relative  z-40 cursor-pointer  '>Mulai</button>
@@ -56,8 +71,11 @@ export default function Jumbotron () {
         }
       }
 
+      
+
       bgp{
         background-position: 0%,50%;
+        
       }
       h1, p {
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
@@ -67,6 +85,7 @@ export default function Jumbotron () {
       }
       .j {
         background: linear-gradient(to left, transparent 0%, black 100%);
+       
         
     }
       
@@ -76,12 +95,31 @@ export default function Jumbotron () {
        
       
       }
+     
       }
       @media only screen and (max-width:360px){
         .j {
         background: linear-gradient(to bottom, transparent 40%, black 100%);
        
       }
+     
+      }
+
+      @media only screen and (orientation: landscape) {
+        
+      }
+
+      @media screen and (height: 276px) {
+        .pClear{
+          padding-bottom: 120vh !important;
+          height:200vh;
+          background-size:cover;
+        }
+
+        .fixText{
+          margin-top:0px;
+          padding-top: 0px;
+        }
       }
       
       

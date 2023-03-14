@@ -9,9 +9,11 @@ gsap.registerPlugin(ScrollToPlugin);
 
 export default function Header ({scrollPosition}){
     const [sizeX, setSizeX] = useState(0)
+    const [sizeY, setSizeY] = useState(0)
     const [xMin, setXMin] = useState(0)
     const [translateXValues, setTranslateXValues] = useState(100)
     const [clickNavStatus,setClickNavStatus] = useState(false)
+    const [landscape,setLandscape] = useState(false)
     const [scrollY, setScrollY] = useState(0);
     const divRef = useRef(null);
     const divRef2 = useRef(null);
@@ -32,19 +34,23 @@ export default function Header ({scrollPosition}){
     }, [ulRef]);
   
 
-    const handleClickNav = () =>{      
+    const handleClickNav = () =>{     
+      setClickNavStatus(!clickNavStatus) 
       divRef.current.classList.toggle('animate1')
       divRef2.current.classList.toggle('animate2')
       divRef3.current.classList.toggle('animate3')
-      ulRef.current.classList.toggle('click4') 
+      
      
-     
+        ulRef.current.classList.toggle('click4') 
+        ulRef.current.classList.toggle('click5') 
+             
     }
    
     useEffect(() => {
      
       const handleScroll = () => {
         setScrollY(scrollPosition);
+
         
       };
 
@@ -52,21 +58,26 @@ export default function Header ({scrollPosition}){
 
       const handleResizeX = () => {
         setSizeX(window.innerWidth)
+        setSizeY(window.innerHeight)
         if (sizeX >640) {
           ulRef.current.classList.remove('ham')
         }else{
           ulRef.current.classList.add('ham')
-        }
-
-
-        
+        }        
         
       }
 
       
+      if(window.innerHeight > 332){
+        
+        handleScroll();
+        
+      }else{
+        
+      }
+        
 
-     
-      handleScroll();
+      
       handleResizeX();
       
   
@@ -76,10 +87,7 @@ export default function Header ({scrollPosition}){
       return () => {
         
         window.removeEventListener("scroll", handleScroll);
-        window.removeEventListener('resize', handleResizeX)
-        
-      
-        
+        window.removeEventListener('resize', handleResizeX);                      
         
       };
     }
@@ -96,7 +104,7 @@ export default function Header ({scrollPosition}){
     let fntli = 20; 
     let x = sizeX;
 
-    
+  
     if(sizeX<1280){     
       b =  -552-(-scrollY);   
    
@@ -108,6 +116,11 @@ export default function Header ({scrollPosition}){
     b= 0
     d= 0  
      }
+     if(sizeX < 481){
+     b= 0
+     }
+
+   
     if(scrollY > 530){
         a= 1253
         c= 53
@@ -129,6 +142,7 @@ export default function Header ({scrollPosition}){
           c=12
           console.log('kontol')
          }
+        
 
 
          
@@ -144,18 +158,18 @@ console.log(sizeX)
 console.log(b)
    
    
-
+4
     
     return (
-        <header className='flex sticky top-[0] w-full bg-black  max-h-full z-50 '>          
-                <div className='flex fixed md:justify-start  top-[0] max-w-2xl max-h-20  md:flex  '
+        <header className='flex sticky top-[0] w-full bg-black  max-h-full z-50 border-white '>          
+                <div className='flex fixed md:justify-start  top-[0] max-w-2xl max-h-20  md:flex   '
                 style={{
                     left: `${a}px`,
                     width: '100vw'
                
                 }}>  
                 {/* flex justify-start fixed top-[0] max-w-2xl max-h-20 md:flex hp:hidden */}
-                 <ul ref={ulRef} className={` order-1 flex xl:justify-start xl:m-0 xl:p-0  fixed xl:left-[20vh]   max-w-fit md:max-h-20 xl:top-[0px]   md:bg-[#395144]  text-[20px] md:h-[72px] pt-[00px]  text-[#FAD6A5] jt z-50 xl:shadow-none md:shadow-black md:shadow-sm  md:flex-row hp:flex-col hp:top-[50px]  md:top-[0px] md:ml-[0%]  hp:ml-[50%] sm:ml-[70%] hp:bg-black md:h-fit md:w-fit hp:h-fit hp:w-[200px] hp:px-[50px] md:text-left hp:text-center  ham `}
+                 <ul ref={ulRef} className={` order-1 flex xl:justify-start xl:m-0 xl:p-0  fixed xl:left-[20vh]   max-w-fit md:max-h-20 xl:top-[0px]   md:bg-[#395144]  text-[20px] md:h-[72px] pt-[00px]  text-[#FAD6A5] jt z-50  md:shadow-black md:shadow-sm  md:flex-row hp:flex-col hp:top-[50px]  md:top-[0px] md:ml-[0%]  hp:ml-[50%] sm:ml-[70%] hp:bg-black md:h-fit md:w-fit hp:h-fit hp:w-[200px] hp:px-[50px] md:text-left hp:text-center  ham ham2`}
              style={{
                  left: `${b}px`,
                  
@@ -164,13 +178,13 @@ console.log(b)
                 
             }}
              >
-                <li  className='jli sm:p-[21px]  hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#jumboTron',9)} href='#jumboTron' >Home</Link></li>
-                <li className='jli sm:p-[21px]  hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#benefits', -200)} href='#benefits' >Benefits</Link></li>
-                <li className='jli sm:p-[21px]  hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#products', -150)}  href='#products'  > Products</Link></li>
-                <li className='jli sm:p-[21px]  hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#testimonial',-150)} href='#testimonial'  >Testimonials</Link></li>
-                <li className='jli sm:p-[21px]  hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#about',50)} href='#about'  >AboutUs</Link></li>
-                <li className='jli sm:p-[21px]  hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#faq',25)}  href='#faq' >Faq</Link></li>
-                <li className='jli sm:p-[21px]  hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#start',60)}  href='#start' >LetsGo!</Link></li>
+                <li  className='jli sm:p-[21px]    hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#jumboTron',9)} href='#jumboTron' >Home</Link></li>
+                <li className='jli sm:p-[21px]    hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#benefits', -200)} href='#benefits' >Benefits</Link></li>
+                <li className='jli sm:p-[21px]    hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#products', -150)}  href='#products'  > Products</Link></li>
+                <li className='jli sm:p-[21px]    hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#testimonial',-150)} href='#testimonial'  >Testimonials</Link></li>
+                <li className='jli sm:p-[21px]   hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#about',50)} href='#about'  >AboutUs</Link></li>
+                <li className='jli sm:p-[21px]   hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#faq',25)}  href='#faq' >Faq</Link></li>
+                <li className='jli sm:p-[21px]   hp:p-[20px] '><Link onClick={(e) => handleClick(e, '#start',60)}  href='#start' >LetsGo!</Link></li>
                  
             </ul> 
             <style jsx>{
@@ -207,6 +221,8 @@ console.log(b)
                 .scroll-to {
                     transition: all 5s ease-in-out;
                   }
+
+                 
                  
                   @media screen and (max-width: 360px) {
                     .ham{
@@ -218,6 +234,10 @@ console.log(b)
                       transform:translateX(0%);
                     }
                   }
+
+                
+                  
+
                   @media screen and (max-width: 640px) {
                     .ham{
                       transform:translateX(100%);
@@ -229,7 +249,22 @@ console.log(b)
                     }
                   }
 
+                  @media screen and (height: 276px) {
+                    .ham2{
+                      transform:translateX(-100%);
+                      transition: transform 1s ease-in-out;
                   
+                    }
+
+                    .jli{
+                      padding:5px;
+                    }
+    
+                    .ham2.click5{
+                      transform:translateX(10%);
+                    
+                    }
+                  }
                
                 `
             }

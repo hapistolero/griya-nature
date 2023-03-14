@@ -41,39 +41,26 @@ export default function Home() {
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </Head>
      
-     <div class="scroll  scroll-smooth " ref={scrollY2} onScroll={handleScroll} style={{scrollBehavior:'smooth'}}>
+     <div class="scroll  scroll-smooth  " ref={scrollY2} onScroll={handleScroll} style={{scrollBehavior:'smooth'}}>
+    
+     
      <Header scrollPosition={scrollPosition}  class="scroll scroll-smooth " ref={scrollY2} onScroll={handleScroll} style={{scrollBehavior:'smooth'}}/>
     
-       {/* jumbotron */}
+      
       <Jumbotron/>
       <Benefits scrollPosition={scrollPosition}></Benefits>                                      
       <ProductsComponent scrollPosition={scrollPosition}/>
      <Testi scrollPosition={scrollPosition}/> 
-     <div className='xl:absolute xl:h-fit xl:top-[4300px]'>
+     <div  className='xl:absolute xl:h-fit md:h-[1300px] sm:h-[1300px] xl:top-[4300px] '>
      <About className={``}/>      
-      <Faq scrollPosition={scrollPosition}/>
-
-     </div>
-     
-      
-      
-
-<Start scrollPosition={scrollPosition}/>
-
-          
+      <Faq scrollPosition={scrollPosition}/>       
+     </div>           
+<Start scrollPosition={scrollPosition}/>          
 <Contact/>
 
 <div></div>
 
-
-
-       
-            
-           
-            
-            
-      
-                                                         
+                                                                                                                   
       </div>  
      
      

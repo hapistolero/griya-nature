@@ -46,7 +46,7 @@ export default function About() {
 
     return(
 <>
-<div id="about" className='static bg-black max-w-[100%] h-fit max-h-fit flex hp:flex-col sm:flex-row'>
+<div id="about" className='relative bg-black max-w-[100%] h-fit max-h-fit flex hp:flex-col sm:flex-row'>
 <div className='w-[50%] border border-1 border-[#FAD6A5] h-fit flex hp:w-[100%] sm:mx-auto'>
                 <div className='w-[50%]' style={
                    {
@@ -82,7 +82,8 @@ export default function About() {
                 </div>
 
               </div>
-              <div className='w-[50%] hp:w-[100%] grow-[1] max-h-fit border border-1 border-[#FAD6A5] text-[#FAD6A5] xl:md:p-[12%] md:sm:p-[5%] md:sm:pt-[25%] sm:pt-[25%] sm:px-2 text-center jt sm:h-[90.3vh] hp:h-[300px] hp:p-[12%] '>
+              <div className='flex items-center justify-center w-[50%] hp:w-[100%] grow-[1] max-h-fit border border-1 border-[#FAD6A5] text-[#FAD6A5] xl:md:p-[12%] md:sm:p-[5%] md:sm:pt-[25%]  text-center jt sm:h-[90.3vh] hp:h-[300px] hp:p-[12%] landscape:p-[10%] '>
+              <div>
               <h2 className='text-xl xl:text-3xl'>About Us</h2>
               <p className='xl:text-lg'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis, 
@@ -90,7 +91,7 @@ export default function About() {
                   nulla vitae mi. Phasellus ac neque justo.
               </p>
               </div>             
-                                
+              </div>           
                                 
         </div>
 

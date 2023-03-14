@@ -46,6 +46,11 @@ body {
   background-position: 0px 50%;
 
   background-size: cover;
+  
+}
+.swiper-pagination-bullet-active {
+  background-color: #AA8B56 !important;
+ 
 }
 
 

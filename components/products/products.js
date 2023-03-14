@@ -1,7 +1,18 @@
 import React, {useState, useEffect, useRef} from 'react'
+import {Swiper, SwiperSlide} from 'swiper/react'
+import { Autoplay, Pagination } from "swiper";
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
+import 'swiper/css';
+
 import Image from 'next/image'
 
 export default function ProductsComponent ({scrollPosition}) {
+
+  
+ 
+
     const [b,setB] = useState(0)
     const [currentSlide1, setCurrentSlide1] = useState(0)
     const [currentSlide2, setCurrentSlide2] = useState(1)
@@ -109,6 +120,8 @@ const productImage = [
 ]
 
 const [isActive, setIsActive] = useState(false);
+const [sizeX, setSizeX] = useState(0);
+const [isSwiper, setIsSwiper] = useState(false)
 const divRef = useRef(null);
 const divRef2 = useRef(null);
 const divRef3 = useRef(null);
@@ -120,7 +133,7 @@ const rdr5 = useRef(null);
      
     useEffect(() =>{
 
-        
+     
         const handleScroll =() => {
            const productImage = document.querySelectorAll('.productImage');
            const productText = document.querySelector('.productText')
@@ -136,9 +149,7 @@ const rdr5 = useRef(null);
                     },timeout)
                     timeout += 500;
                     setVisible(true)                                      
-                });
-
-                
+                });               
 
                //handleAuto(visible)
                
@@ -170,6 +181,11 @@ const rdr5 = useRef(null);
             
           }
           
+          const handleResizeX = () => {
+            setSizeX(window.innerWidth)            
+    
+                                        
+          }
         
           
       
@@ -177,13 +193,15 @@ const rdr5 = useRef(null);
   
 
        
-
+        handleResizeX()
         handleScroll()
 
+          
             window.addEventListener('scroll', handleScroll);
-            
+            window.addEventListener('resize',handleResizeX)
             return () => {
                 window.removeEventListener('scroll', handleScroll)
+                window.removeEventListener('resize',handleResizeX)
             }
 
 
@@ -283,43 +301,64 @@ const rdr5 = useRef(null);
               setCurrentSlide2(13)
               setCurrentSlide3(14)
     }
-    return (
-<>
-        <div id='products' className='relative xl:top-[-650px] md:top-[-280px] sm:top-[-270px] hp:top-[-300px] -z-20 w-[100%] max-h-fit bg-[rgb(57,81,68)]  xl:md:p-[20%] md:p-[0px] xl:mt-[0px] sm:mt-[180px] hp:top-[-200px] productText '>
-        <h2 className='text-center text-4xl mb-12 text jt  text-[#FAD6A5]  '>Products</h2>
-          <div className=' flex xl:md:justify-between md:justify-around sm:p-[3%] sm:mx-auto jt'>
-          <div ref={divRef} className={`max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md sm:m-[1%] hp:hidden sm:inline-flex  grow-1  productImage`}
-          >  
-          <div className={`absolute text-[#FAD6A5] z-20  flex flex-col items-center justify-center text-center w-[100%] h-[100%]   hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100 ease-in-out `}>
-            <h3 className={'text-3xl '}>{productImage[currentSlide1].name}</h3>
-            <p className='text-xl'>{productImage[currentSlide1].price}</p>
-            </div>          
-            <Image src={productImage[currentSlide1].url} className={` prodimg custom-img img bg-gradient-to-b from-black `} width={200} height={400} alt='1'></Image>
-         
-            
-          </div>
-          <div ref={divRef2} className={'max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md md:mx-[10px] sm:m-[1%] hp:mx-auto  grow-1  productImage'}>            
-          <div className={`absolute text-[#FAD6A5] z-20   flex flex-col items-center justify-center text-center w-[100%] h-[100%]  hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100  `}>
-          <h3 className={'text-3xl'}>{productImage[currentSlide2].name}</h3>
-            <p className='text-xl'>{productImage[currentSlide2].price}</p>
-          </div>
-            <Image src={productImage[currentSlide2].url} className={` prodimg custom-img img bg-gradient-to-b from-black `} width={200} height={400} alt='2'></Image>
-          </div>
-          
-          <div ref={divRef3} className={'max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md unset-img sm:m-[1%] hp:hidden sm:inline-flex grow-1   productImage'}>  {
 
-          }    
-          <div className={`absolute text-[#FAD6A5] z-20   flex flex-col items-center justify-center text-center w-[100%] h-[100%]  hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100`}>
-          <h3 className={'text-3xl'}>{productImage[currentSlide3].name}</h3>
-            <p className='text-xl'>{productImage[currentSlide3].price}</p>
-          </div>      
-            <Image className='prodimg custom-img img   '  src={productImage[currentSlide3].url} layout="fill" objectFit='cover' alt='3' ></Image>
-          </div>
+let content = null
+    if(sizeX <= 360 ){
+      content =
+        <Swiper className='flex items-center justify-center hp:p-[3%]     jt h-fit h-[22rem]  '
+      spaceBetween={0}
+      slidesPerView={1}
+     
+      pagination={{clickable:true}}
+      modules={[Autoplay,Pagination]}
+      loop={true}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false
+      }}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+     
+    >
+      {productImage.map((product) =>
+       <SwiperSlide className=''>{slideProduct(product)}</SwiperSlide>
+      )}
+     
+      
+      ...
+    </Swiper>
 
-          
+    }else{
+      console.log(productImage[currentSlide1].name)
+      content = 
+      <>
+      <div className=' flex xl:md:justify-between md:justify-around sm:p-[3%] sm:mx-auto jt'>
+      <div ref={divRef} className={`max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md sm:m-[1%] hp:hidden sm:inline-flex  grow-1  productImage`}
+      >  
+      <div className={'absolute text-[#FAD6A5] z-20   flex flex-col items-center justify-center text-center w-[100%] h-[100%]  hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100 '}>
+        <h3 className={'text-3xl '}>{productImage[currentSlide1].name}</h3>
+        <p className='text-xl'>{productImage[currentSlide1].price}</p>
+        </div>          
+        <Image src={productImage[currentSlide1].url} className={` prodimg custom-img img bg-gradient-to-b from-black `} width={200} height={400} alt='1'></Image>
+               
+      </div>
+      <div ref={divRef2} className={'max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md md:mx-[10px] sm:m-[1%] hp:mx-auto  grow-1  productImage'}>            
+      <div className={`absolute text-[#FAD6A5] z-20   flex flex-col items-center justify-center text-center w-[100%] h-[100%]  hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100  `}>
+      <h3 className={'text-3xl'}>{productImage[currentSlide2].name}</h3>
+        <p className='text-xl'>{productImage[currentSlide2].price}</p>
+      </div>
+        <Image src={productImage[currentSlide2].url} className={` prodimg custom-img img bg-gradient-to-b from-black `} width={200} height={400} alt='2'></Image>
+      </div>
+      
+      <div ref={divRef3} className={'max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md unset-img sm:m-[1%] hp:hidden sm:inline-flex grow-1   productImage'}>  {
 
-          </div>
-          <div className='flex justify-evenly mt-10'>
+      }    
+      <div className={`absolute text-[#FAD6A5] z-20   flex flex-col items-center justify-center text-center w-[100%] h-[100%]  hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100`}>
+      <h3 className={'text-3xl'}>{productImage[currentSlide3].name}</h3>
+        <p className='text-xl'>{productImage[currentSlide3].price}</p>
+      </div>      
+        <Image className='prodimg custom-img img   '  src={productImage[currentSlide3].url} layout="fill" objectFit='cover' alt='3' ></Image>
+      </div><div className='flex justify-evenly mt-10 hp:mt-0'>
             <div ref={rdr1} onClick={handleClick1} className='bg-[#FAD6A5] h-[15px] w-[15px] rounded-full shadow-black shadow-sm hover:bg-[#AA8B56] hover:border hover:border-[#FAD6A5] active:after:bg-bg-[#AA8B56] cursor-pointer'></div>
             <div ref={rdr2} onClick={handleClick2} className='bg-[#FAD6A5] h-[15px] w-[15px] rounded-full shadow-black shadow-sm hover:bg-[#AA8B56] hover:border hover:border-[#FAD6A5] active:after:bg-bg-[#AA8B56] cursor-pointer'></div>
             <div ref={rdr3} onClick={handleClick3} className='bg-[#FAD6A5] h-[15px] w-[15px] rounded-full shadow-black shadow-sm hover:bg-[#AA8B56] hover:border hover:border-[#FAD6A5] active:after:bg-bg-[#AA8B56] cursor-pointer'></div>
@@ -327,63 +366,157 @@ const rdr5 = useRef(null);
             <div ref={rdr5} onClick={handleClick5} className='bg-[#FAD6A5] h-[15px] w-[15px] rounded-full shadow-black shadow-sm hover:bg-[#AA8B56] hover:border hover:border-[#FAD6A5] active:after:bg-bg-[#AA8B56] cursor-pointer'></div>
           </div>
 
+
+      
+
+      </div>
+      <style jsx>
+      {
+          `
+          @keyframes example {
+            from {
+              opacity: 0;
+              
+              
+            }to{
+              opacity: 1;                    
+              
+            }
+          }
+
+          .upDown{
+            animation: example 1.6s ease-in-out infinite;
+          }
+          .productImage{
+              opacity: 0;
+              transform: translateY(-100%);
+              transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+          }
+
+          .productImage.visible{
+              opacity:1;
+              transform: translateY(0);
+              transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+          }
+          .productImage.visible:hover{
+            border: 1px solid #FAD6A5;
+            box-shadow: 3px 4px 8px #FAD6A5;
+            transform: scale(1.1)                
+
+
+        }
+          .slider {
+            animation: example 3s infinite,background-image 3s ease-in-out infinite ;                  
+          }
+          
+          .clicked {
+            background-color: #AA8B56;
+            border: 1px solid #FAD6A5;
+          }
+
+          h3, p {
+            text-shadow: 1px 1px 1px rgba(233, 233, 233, 0.5);                
+            
+          }
+          
+          `
+      }
+    </style>
+</>
+    }
+
+    return (
+<>    
+        
+        <div id='products' className='relative xl:top-[-650px] md:top-[-280px] sm:top-[-270px] hp:top-[-300px] -z-20 w-[100%] max-h-fit bg-[rgb(57,81,68)]  xl:md:p-[20%] md:p-[0px] xl:mt-[260vh] sm:mt-[180px] hp:top-[-200px]  productText border-white '>
+        <h2 className='text-center text-4xl mb-12 text jt  text-[#FAD6A5]  '>Products</h2>
+         {content}
+          
+
         </div>
 
 
-          <style jsx>
-            {
-                `
-                @keyframes example {
-                  from {
-                    opacity: 0;
-                    
-                    
-                  }to{
-                    opacity: 1;                    
-                    
-                  }
-                }
-
-                .upDown{
-                  animation: example 1.6s ease-in-out infinite;
-                }
-                .productImage{
-                    opacity: 0;
-                    transform: translateY(-100%);
-                    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-                }
-
-                .productImage.visible{
-                    opacity:1;
-                    transform: translateY(0);
-                    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-
-                }
-                .productImage.visible:hover{
-                  border: 1px solid #FAD6A5;
-                  box-shadow: 3px 4px 8px #FAD6A5;
-                  transform: scale(1.1)                
-
-
-              }
-                .slider {
-                  animation: example 3s infinite,background-image 3s ease-in-out infinite ;                  
-                }
-                
-                .clicked {
-                  background-color: #AA8B56;
-                  border: 1px solid #FAD6A5;
-                }
-
-                h3, p {
-                  text-shadow: 1px 1px 1px rgba(233, 233, 233, 0.5);                
-                  
-                }
-                
-                `
-            }
-          </style>
+          
 
 </>
     )
+
+
+    function slideProduct(productImage){    
+      return(
+        <>
+        <div ref={divRef} className={`max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md sm:m-[1%] sm:inline-flex  mt-[4%]  grow-2 mx-auto  productImage`}
+      >  
+      <div className={`absolute text-[#FAD6A5] z-20  flex flex-col items-center justify-center text-center w-[100%] h-[100%]    hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100 ease-in-out `}>
+        <h3 className={'text-3xl '}>{productImage.name}</h3>
+        <p className='text-xl'>{productImage.price}</p>
+        </div>          
+        <Image src={productImage.url} className={` prodimg custom-img img bg-gradient-to-b from-black `} width={200} height={400} alt='1'></Image>
+               
+      </div>
+       <style jsx>
+      {
+          `
+          @keyframes example {
+            from {
+              opacity: 0;
+              
+              
+            }to{
+              opacity: 1;                    
+              
+            }
+          }
+
+          .upDown{
+            animation: example 1.6s ease-in-out infinite;
+          }
+          .productImage{
+              opacity: 0;
+              transform: translateY(-100%);
+              transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+          }
+
+          .productImage.visible{
+              opacity:1;
+              transform: translateY(0);
+              transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+          }
+          .productImage.visible:hover{
+            border: 1px solid #FAD6A5;
+            box-shadow: 3px 4px 8px #FAD6A5;
+            transform: scale(1.1)                
+
+
+        }
+          .slider {
+            animation: example 3s infinite,background-image 3s ease-in-out infinite ;                  
+          }
+          
+          .clicked {
+            background-color: #AA8B56;
+            border: 1px solid #FAD6A5;
+          }
+
+          h3, p {
+            text-shadow: 1px 1px 1px rgba(233, 233, 233, 0.5);                
+            
+          }
+
+          @media only screen and (max-width:360px){
+            .productImage.visible:hover{
+              border: 1px solid #FAD6A5;
+              box-shadow: 3px 4px 8px #FAD6A5;
+              transform: scale(1.02)                
+  
+  
+          }
+          
+          `
+      }
+    </style></>
+      )
+    }
 }
