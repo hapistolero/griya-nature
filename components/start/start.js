@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react'
 import Image from 'next/image'
 import Modal from '../modalBox/modal'
+import Link from 'next/link'
 
 export default function Start({scrollPosition}){
   const [b,setB] = useState(0)
@@ -59,17 +60,32 @@ export default function Start({scrollPosition}){
                   You can start shoping in your favorite marketplace.
                   </h3>
                   <div className='sm:flex sm:justify-between h-[150px] w-fit  hp:grid hp:grid-cols-2 hp:mx-auto hp:translate-x-[15px]'>
-                    <div className='basis-1/4 xl:md:p-[0px] md:p-[10px]   xl:md:px-[0px] md:px-[1px] sm:p-[5%] xl:w-fit md:w-[50px] sm:w-[20px] sm:px-0 hp:w-[100px]   divImg'>
-                    <Image className='prodimg custom-img max-w-[100%] max-h-[100%] '  src='/start/shopee.png' layout="contain" width={100} height={100} objectFit='cover'></Image>
+                    <div className='basis-1/4 xl:md:p-[0px] md:p-[10px]   xl:md:px-[0px] md:px-[1px] sm:p-[5%] xl:w-fit md:w-[50px] sm:w-[20px] sm:px-0 hp:w-[100px]   divImg '>
+                      <Link href='https://shopee.co.id/griya.nature'>
+                      <Image className='prodimg custom-img max-w-[100%] max-h-[100%] cursor-pointer hover:scale-[1.05]  transition-transform  '  src='/start/shopee.png' layout="contain" width={100} height={100} objectFit='cover'></Image>
+                      </Link>
+                    
                     </div>
-                    <div className='basis-1/4  xl:md:p-[0px] md:p-[10px]  xl:md:px-[0px] md:px-[1px] sm:p-[5%] xl:w-fit sm:px-0 hp:w-[120px] divImg'>
-                    <Image className='prodimg custom-img max-w-[100%]'  src='/start/lazada.png' layout="contain" width={100} height={100} objectFit='cover'></Image>
+                    <div className='basis-1/4  xl:md:p-[0px] md:p-[10px]  xl:md:px-[0px] md:px-[1px] sm:p-[5%] xl:w-fit sm:px-0 hp:w-[120px] divImg '>
+                    <Link href='https://www.lazada.co.id/shop/griya-nature/?spm=a2o4j.pdp_revamp.seller.1.141633abyrX2iW&itemId=6619230229&channelSource=pdp'>
+                    <Image className='prodimg custom-img max-w-[100%] cursor-pointer hover:scale-[1.05]  transition-transform'  src='/start/lazada.png' layout="contain" width={100} height={100} objectFit='cover'></Image>
+                    
+                    </Link>
+                    
                     </div>
-                    <div className='basis-1/4  xl:md:p-[0px] md:p-[20px]  xl:md:px-[0px] md:px-[0px] sm:p-[5%] xl:w-fit sm:px-0 hp:w-[100px] divImg'>
-                    <Image className='prodimg custom-img max-w-[100%]'  src='/start/tokped.png' layout="contain" width={100} height={100} objectFit='cover'></Image>
+                    <div className='basis-1/4  xl:md:p-[0px] md:p-[20px]  xl:md:px-[0px] md:px-[0px] sm:p-[5%] xl:w-fit sm:px-0 hp:w-[100px] divImg '>
+                    <Link href='https://www.tokopedia.com/griya-nature?source=universe&st=product'>
+                    <Image className='prodimg custom-img max-w-[100%] cursor-pointer hover:scale-[1.05]  transition-transform '  src='/start/tokped.png' layout="contain" width={100} height={100} objectFit='cover'></Image>
+                    
+                    </Link>
+                    
                     </div>
-                    <div className='basis-1/4  xl:md:p-[0px] md:p-[0px]  xl:md:px-[0px] md:px-[0px] sm:p-[0%] xl:w-fit sm:px-0 hp:w-[120px] hp:p-0 divImg'>
-                    <Image className='prodimg custom-img hp:w-[120px]  max-w-[100%]'   src='/start/tiktok.png' layout="contain" width={100} height={100} objectFit='cover'></Image>
+                    <div className='basis-1/4  xl:md:p-[0px] md:p-[0px]  xl:md:px-[0px] md:px-[0px] sm:p-[0%] xl:w-fit sm:px-0 hp:w-[120px] hp:p-0 divImg '>
+                    <Link href='https://vm.tiktok.com/ZS84dbpv7/'>
+                    <Image className='prodimg custom-img hp:w-[120px]  max-w-[100%] cursor-pointer hover:scale-[1.05]  transition-transform'   src='/start/tiktok.png' layout="contain" width={100} height={100} objectFit='cover'></Image>
+                    
+                    </Link>
+                    
                     </div>
                   </div>   
                   <button onClick={()=> setOpen(true)}  className='bg-[#CFB997] hover:bg-[#AA8B56]  font-bold py-2 px-4 rounded-xl text-black w-[160px] h-[50px] jt mx-[40%] xl:bottom-[90px] xl:w-[200px] xl:h-[60px] xl:text-xl my-4 border border-slate-900 xl:static md:relative hp:absolute sm:bottom-[-30px] sm:right-[-50px]  hp:bottom-[-200px] hp:mx-[25%] hp:translate-x-[23px] '>Email Us!</button>                

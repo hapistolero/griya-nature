@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react'
+import Modal from '../modalBox/modal'
 import Image from 'next/image'
 
 
@@ -6,7 +7,7 @@ import Image from 'next/image'
 export default function Faq({scrollPosition}) {
 
     const [b, setB] = useState(0)
-
+    const [selectedFaq, setSelectedFaq] = useState(false);
     useEffect(() =>{
         const handleScroll = () =>{
             const divFaq = document.querySelector('.divFaq')
@@ -57,15 +58,60 @@ export default function Faq({scrollPosition}) {
         <div id='faq' className='xl:relative faq  bg-contain     max-w-[100%]  md:max-h-[130vh] sm:max-h-[120vh]  hp:h-[120vh] xl:mb-[0vh]  sm:h-[50vh]  xl:pb-[250vh] md:pb-[140vh] sm:pb-[130vh] pAdd  divFaq ' >
               <h2 className='jt text-center text-[#FAD6A5] p-[50px] text-[40px] h-fit  '>FAQ</h2>
             <div className='relative bottom-[3%] bg-contain       grid grid-cols-2 gap-[10%] px-7 py-5 xl:pb-0  landscape:pb-[50vh] xl:pb-[0vh] xl:bg-none landscape:bg-[length:550px_100vw] absolute   '>
-              <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
-              <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
-              <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105  transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
-              <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
-              <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp '>How to Buy?</div>
-              <div className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
+              <div  onClick={() => setSelectedFaq(!selectedFaq)} className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
+              <div onClick={() => setSelectedFaq(!selectedFaq)} className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
+              <div onClick={() => setSelectedFaq(!selectedFaq)} className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105  transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
+              <div onClick={() => setSelectedFaq(!selectedFaq)} className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
+              <div onClick={() => setSelectedFaq(!selectedFaq)} className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp '>How to Buy?</div>
+              <div onClick={() => setSelectedFaq(!selectedFaq)} className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
               
         </div>         
-       
+        {selectedFaq && (
+        <div className="modal fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex items-center justify-center z-[100]">
+          
+        <div className=" bg-white w-100 sm:w-[35rem] hp:w-80  rounded-lg p-8  ">
+          <div className='w-100 text-center bg-slate-100 p-8 rounded-lg '>
+          <h3>how to buy?</h3>
+        <p>icaacspinscapininascini
+        icaacspinscapininascini
+        icaacspinscapininascini
+        icaacspinscapininascini
+        icaacspinscapininascini
+        </p>
+
+          </div>
+          
+        
+          <button
+            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4  my-4 rounded-lg w-[100%]"
+            onClick={()=> setSelectedFaq(!selectedFaq)}
+          >
+            Close
+          </button>
+          
+
+         
+          
+        </div>
+        {/*<style jsx>{`
+        .modal {
+          animation-name: fadeIn;
+          animation-duration: 0.5s;
+          animation-fill-mode: both;
+        }
+        
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        `}</style>  */}
+     </div>
+     
+      )}
             
             </div>
 
@@ -115,6 +161,22 @@ export default function Faq({scrollPosition}) {
                         .pAdd{
                           padding-bottom: 290vh !important;
                           heigth:100px;
+                        }
+                      }
+
+
+                      .modal {
+                        animation-name: fadeIn;
+                        animation-duration: 0.5s;
+                        animation-fill-mode: both;
+                      }
+                      
+                      @keyframes fadeIn {
+                        from {
+                          opacity: 0;
+                        }
+                        to {
+                          opacity: 1;
                         }
                       }
 

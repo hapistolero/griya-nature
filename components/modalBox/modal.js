@@ -1,13 +1,18 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Image from 'next/image'
 
 
 export default function Modal ({open,onClose})  {
+  const [isOpen, setIsOpen] = useState(open);
    
-    if(!open) return null;
+  useEffect(() => {
+     setIsOpen(open);
+  }, [open]);
+
+    if(!isOpen) return null;
     return(
         <>
-     <div className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex items-center justify-center z-[100]">
+     <div className=" modal fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex items-center justify-center z-[100]">
         <div className=" bg-white w-100 sm:w-[35rem] hp:w-80  rounded-lg p-8  ">
         <h2 className="text-2xl font-bold mb-4">Subscribe!</h2>
         <div className="flex  sm:flex-row hp:flex-col ">
@@ -57,6 +62,22 @@ export default function Modal ({open,onClose})  {
           </div>
           
         </div>
+        <style jsx>{`
+        .modal {
+          animation-name: fadeIn;
+          animation-duration: 0.5s;
+          animation-fill-mode: both;
+        }
+        
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        `}</style>
      </div>
     </>
    

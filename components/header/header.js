@@ -251,7 +251,7 @@ console.log(b)
 
                   @media screen and (height: 276px) {
                     .ham2{
-                      transform:translateX(-100%);
+                      transform:translateX(1000%);
                       transition: transform 1s ease-in-out;
                   
                     }
