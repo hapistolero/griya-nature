@@ -70,7 +70,7 @@ export default function Faq({scrollPosition}) {
         <div className="modal fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex items-center justify-center z-[100]">
           
         <div className=" bg-white w-100 sm:w-[35rem] hp:w-80  rounded-lg p-8  ">
-          <div className='w-100 text-center bg-slate-100 p-8 rounded-lg '>
+          <div className='w-100 text-center bg-slate-100 p-8 rounded-lg overflow-scroll'>
           <h3>how to buy?</h3>
         <p>icaacspinscapininascini
         icaacspinscapininascini

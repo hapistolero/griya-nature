@@ -515,7 +515,7 @@ let content = null
       
                     <div className='flex sm:flex-row hp:flex-col'>
                    
-                    <div className='sm:basis-[50%]  border-black border  bg-gray-700 rounded overflow-hidden shadow-sm shadow-black hp:basis-[25%] hp:max-h-[200px] hp:flex hp:justify-center overflow-scroll'>
+                    <div className='sm:basis-[50%]  border-black border  bg-gray-700 rounded md:overflow-hidden shadow-sm shadow-black hp:basis-[25%] hp:max-h-[200px] hp:flex hp:justify-center hp:overflow-scroll'>
                      
                        <Image id='modal-img'  className='slideModal  hFix prodimg custom-img sm:max-w-[100%] hp:max-w-full hp:max-h-fit sm:max-h-[100%] cursor-pointer hover:scale-[1.05]   transition-transform bg-center '  src={productImage[idx].url} layout="contain" width={100} height={100} objectFit='cover'></Image>
                            
@@ -525,7 +525,7 @@ let content = null
                     <h2 className='text-xl text-bold'>{productImage[idx].name}</h2>
                     
                     <p>Price  :{productImage[idx].price}</p>
-                    <div className='hp:overflow-scroll md:overflow-scroll   border-black border  shadow-black  sm:h-[150px]landscape:h-[90px] hp:h-[100px] bg-[#F7EFE5]'>
+                    <div className='hp:overflow-scroll md:overflow-scroll   border-black border  shadow-black md:h-[150px]  xl:h-[140px] sm:h-[150px]  hp:h-[100px] bg-[#F7EFE5]'>
                     <p className=' '>detail :{productImage[idx].detail}</p>
                     </div>
                                   
