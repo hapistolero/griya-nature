@@ -169,7 +169,7 @@ console.log(b)
                
                 }}>  
                 {/* flex justify-start fixed top-[0] max-w-2xl max-h-20 md:flex hp:hidden */}
-                 <ul ref={ulRef} className={` order-1 flex xl:justify-start xl:m-0 xl:p-0  fixed xl:left-[20vh]   max-w-fit md:max-h-20 xl:top-[0px]   md:bg-[#395144]  text-[20px] md:h-[72px] pt-[00px]  text-[#FAD6A5] jt z-50  md:shadow-black md:shadow-sm  md:flex-row hp:flex-col hp:top-[50px]  md:top-[0px] md:ml-[0%]  hp:ml-[50%] sm:ml-[70%] hp:bg-black md:h-fit md:w-fit hp:h-fit hp:w-[200px] hp:px-[50px] md:text-left hp:text-center  ham ham2`}
+                 <ul ref={ulRef} className={` order-1 flex xl:justify-start xl:m-0 xl:p-0  fixed xl:left-[20vh]   max-w-fit md:max-h-20 xl:top-[0px]   md:bg-[#395144]  text-[20px] md:h-[72px] pt-[00px]  text-[#FAD6A5] jt z-50  md:shadow-black md:shadow-sm  md:flex-row hp:flex-col hp:top-[50px]  md:top-[0px] md:ml-[0%]  hp:ml-[50%] hp:ml-[70%] sm:ml-[70%] hp:bg-black md:h-fit md:w-fit hp:h-fit hp:w-[200px] hp:px-[50px] md:text-left hp:text-center  ham ham2`}
              style={{
                  left: `${b}px`,
                  
@@ -224,16 +224,7 @@ console.log(b)
 
                  
                  
-                  @media screen and (max-width: 360px) {
-                    .ham{
-                      transform:translateX(100%);
-                      transition: transform 1s ease-in-out;
-                    }
-    
-                    .ham.click4{
-                      transform:translateX(0%);
-                    }
-                  }
+                 
 
                 
                   
@@ -246,6 +237,48 @@ console.log(b)
     
                     .ham.click4{
                       transform:translateX(0%);
+                    }
+                  }
+
+                  @media screen and (max-width:609px) {
+                    .ham{
+                      transform:translateX(0%);
+                      transition: transform 1s ease-in-out;
+                      margin-left:0;
+                  
+                    }
+
+                    
+    
+                    .ham.click4{
+                      transform:translateX(10%);
+                    
+                    }
+
+                    .ham2{
+                      transform:translateX(0%);
+                      transition: transform 1s ease-in-out;
+                  
+                    }
+
+                    
+    
+                    .ham2.click5{
+                      transform:translateX(10%);
+                    
+                    }
+                  }
+
+                  @media screen and (max-width: 360px) {
+                    .ham{
+                      right:0;
+                      transform:translateX(100vw);
+                      transition: transform 1s ease-in-out;
+                    }
+    
+                    .ham.click4{
+                      
+                      transform:translateX(50vw);
                     }
                   }
 

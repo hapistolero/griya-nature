@@ -53,7 +53,7 @@ export default function Jumbotron () {
         
         
       <div className=' pl-[20px] md:xl:pt-[35vh] hp:landscape:px-auto md:pt-[19vh] sm:pt-[16vh] font-[Averia Sans Libre] sm:w-[50%]  hp:w-[100%] sm:mt-[0%] sm:my-[5%] hp:mt-[5%] sm:text-left hp:text-center xl:mt-0  hp:absolute j hp:py-12 sm:py-[1000vh] xl:h-full hp:landscape:h-full sm:top-0 hp:bottom-0 fixText '>
-      <h1 className='text-[#F2EAE0] md:xl:text-[50px] md:text-[35px] sm:text-[30px] font-[Averia Serif Libre] jt hp:text-[22px] hp:w-[100%] drop-shadow-md sm:mt-0 hp:mt-[100%] xl:pt-0 sm:pt-[30%] md:pt-[15%]'>The Magic Of Kitchen, Herbal Drink And Gift</h1>
+      <h1 className='text-[#F2EAE0] md:xl:text-[50px] md:text-[35px] sm:text-[30px] font-[Averia Serif Libre] jt hp:text-[22px] hp:w-[100%] drop-shadow-md sm:mt-0 hp1:mt-[50%] hp:mt-[100%] xl:pt-0 sm:pt-[30%] md:pt-[15%]'>The Magic Of Kitchen, Herbal Drink And Gift</h1>
       <p className='text-[#F2EAE0] font-[Averia Serif Libre] jt md:xl:text-base md:text-lg sm:text-base hp:text-base hp:w-[100%] drop-shadow-md shadow-white xl:text-2xl sm:right-0 hp:right-[5px] hp:relative  ' >Berikan kenangan, kesehatan dan waktu makan malam yang berarti bagi orang terkasih.</p>
               <button onClick={()=> setOpen(true)} className='bg-[#CFB997] hover:bg-[#AA8B56] font-bold py-2 px-4 rounded text-black md:xl:w-[160px] md:xl:h-[50px] md:w-[120px]  md:h-[45px] jt  hp:w-[50%] m-2 relative  z-40 cursor-pointer  '>Mulai</button>
       </div>

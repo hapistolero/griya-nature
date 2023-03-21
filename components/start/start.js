@@ -50,7 +50,7 @@ export default function Start({scrollPosition}){
         <div className='xl:relative  '>
             <h2 className='text-center text-[#FAD6A5] jt md:text-[60px] sm:text-[50px] underline hp:text-[30px] '>Lets Gets Start</h2>
             <div className='grid grid-cols-2 '>
-            <div className='absolute max-w-full max-h-fit flex sm:translate-x-[-15px]  hp:flex-col sm:flex-row '>
+            <div className='absolute max-w-full max-h-fit flex sm:translate-x-[-15px] hp1:translate-x-[15vw] sm:translate-x-[-30px]  hp:flex-col sm:flex-row '>
                 <div className='relative  sm:w-[50vw] xl:h-[80vh]   bottom-[200px] left-[50px] hp:w-[100%] hp:h-fit hp:bottom-[50px] divTeko'>
                 <Image className='prodimg custom-img' src='/cta/teko.svg' layout="contain" width={1000} height={1000} objectFit='cover'></Image>
                 
@@ -59,7 +59,7 @@ export default function Start({scrollPosition}){
                   <h3 className='xl:md:text-4xl jt text-[#FAD6A5] md:text-3xl  xl:md:p-11 sm:text-2xl hp:text-lg hp:text-center sm:text-left'>
                   You can start shoping in your favorite marketplace.
                   </h3>
-                  <div className='sm:flex sm:justify-between h-[150px] w-fit  hp:grid hp:grid-cols-2 hp:mx-auto hp:translate-x-[15px]'>
+                  <div className='sm:flex sm:justify-between h-[150px] w-fit  hp:grid hp:grid-cols-2 hp:mx-auto hp1:mt-[10px] hp:translate-x-[15px]'>
                     <div className='basis-1/4 xl:md:p-[0px] md:p-[10px]   xl:md:px-[0px] md:px-[1px] sm:p-[5%] xl:w-fit md:w-[50px] sm:w-[20px] sm:px-0 hp:w-[100px]   divImg '>
                       <Link href='https://shopee.co.id/griya.nature'>
                       <Image className='prodimg custom-img max-w-[100%] max-h-[100%] cursor-pointer hover:scale-[1.05]  transition-transform  '  src='/start/shopee.png' layout="contain" width={100} height={100} objectFit='cover'></Image>

@@ -55,9 +55,9 @@ export default function Benefits ({scrollPosition}) {
     
   return (
     <>
-      <div  className={'xl:h-fit xl:relative   sm:h-full xl:mt-[212vh] xl:mb-[0px] md:mb-[700px] sm:h-[60vh] hp:h-fit hp:mb-0 scroll-smooth    landscape:mb-[55em] border-white '}>
+      <div  className={'xl:h-fit xl:relative   sm:h-full xl:mt-[212vh] xl:mb-[0px] md:mb-[700px] md:h-[90vh] sm:h-[200vh] hp:h-fit hp:mb-0 scroll-smooth sm: hp1:mb-[0px]    border-white '}>
          {/* benefits */}
-       <div id='benefits' className= 'md:p-[23%] w-[150%]  sm:h-[215vh] hp:h-[2100px] md:w-[150%] xl:bg-contain  bn xl:absolute xl:bottom-[0px] md:bottom-[410px]   relative left-[-170px] bg-no-repeat text-lg font-bold sm:bottom-[375px]  hp:bottom-[330px]   md:pt-[25%] md:mt-[150px]  sm:mt-[150px]  hp:bg-cover sm:h-fit  landscape:h-fit benefCont  '>
+       <div id='benefits' className= 'md:p-[23%] w-[150%]  sm:h-[215vh] hp:h-[2100px] md:w-[150%] xl:bg-contain  bn xl:absolute xl:bottom-[0px] md:bottom-[410px]   relative left-[-170px] bg-no-repeat text-lg font-bold sm:bottom-[375px]  hp:bottom-[330px]   md:pt-[25%] md:mt-[150px]  sm:mt-[150px]  hp:bg-cover sm:h-fit hp1:pb-[100px]  landscape:h-fit benefCont  '>
 
         <style jsx>{
             `
@@ -92,7 +92,7 @@ export default function Benefits ({scrollPosition}) {
 
         </style>
          < h2 className='md:xl:text-4xl md:text-3xl xl:pl-[26%] md:pl-[30%] md:xl:mb-6 md:mb-4 md:sm:pt-[15%] md:xl:p-0 sm:pl-[40%] sm:pt-[30%] sm:text-2xl hp:pl-[60vw]  hp:pt-[460px]  hp:text-[25px]'>Why Choose Our Store?</h2>
-        <div className='grid md:grid-cols-3 md:pr-[5%] md:pt-[0%] md:pl-[5%] grid-rows-2 gap-y-[30%] md:pb-[20%] sm:pl-[25%] xl:pl-[12%]  sm:grid-cols-2 sm:gap-0 sm:gap-y-12  xl:pt-[0vh] sm:pt-[0vh] sm:w-fit sm:h-fit sm:gap-x-24 hp:flex hp:flex-col hp:gap-20 sm:grid sm:ml-[0%] hp:ml-[48%]'>
+        <div className='grid md:grid-cols-3 md:pr-[5%] md:pt-[0%] md:pl-[5%] grid-rows-2 gap-y-[30%] md:pb-[20%] sm:pl-[25%] xl:pl-[12%]  sm:grid-cols-2 sm:gap-0 sm:gap-y-12  xl:pt-[0vh] sm:pt-[0vh] sm:w-fit sm:h-fit sm:gap-x-24 hp:flex hp:flex-col hp:gap-20 sm:grid sm:ml-[0%] hp1:ml-[43%] hp:ml-[48%]'>
             <div className={`w-fit h-fit text-center  sm:content-center sm:pl-[15%]   hp:mt-[70px] hover:scale-110 transition-all benefImage  `}>          
               <Image className='md:w-[150px] md:h-[150px]  transition-all' src='/benefits/trust.svg' width={200} height={200} alt='trust'></Image> 
             <h3 className='bn'>Trusted And Safe</h3>

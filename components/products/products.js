@@ -21,9 +21,9 @@ export default function ProductsComponent ({scrollPosition}) {
     const [currentSlide2, setCurrentSlide2] = useState(1)
     const [currentSlide3, setCurrentSlide3] = useState(2) 
     const [currentIdx, setCurrentIdx] = useState(0)
-    let count = 0
+    
     const [visible,setVisible] = useState(false)    
-    const [click,setClick] = useState(false)
+    const [pagePerView,setPagePerview] = useState(0)
     const images = ['/products/4.jpg',
 '/products/2.jpg',
 '/products/3.jpg',
@@ -326,14 +326,16 @@ const rdr5 = useRef(null);
    
     const getIndex = (e, index) =>{
       if(sizeX <= 360){
+
         setCurrentIdx(index -1)
         productDetail(currentIdx)
+        setPagePerview(1)
+       
       }else{
       
       }
      
     }
-    let idx = 0
    
 let content = null
     if(sizeX <= 360 ){
@@ -367,27 +369,29 @@ let content = null
       console.log(productImage[currentSlide1].name)
       content = 
       <>
-      <div className=' flex xl:md:justify-between md:justify-around sm:p-[3%] sm:mx-auto jt'>
-      <div ref={divRef} className={`max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md sm:m-[1%] hp:hidden sm:inline-flex  grow-1  productImage`}
+      <div className=' flex xl:md:justify-between md:justify-around sm:p-[3%] sm:mx-auto hp1:mx-[20px] jt'>
+      <div ref={divRef} className={`max-w-[200px] max-h-[500px]  border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md sm:m-[1%]  sm:inline-flex  grow-1  productImage`}
       >  
-      <div onClick={() =>{ setDetail(!detail); setCurrentIdx(currentSlide1)}} className={'absolute text-[#FAD6A5] z-20   flex flex-col items-center justify-center text-center w-[100%] h-[100%]  hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100 '}>
+      <div onClick={() =>{ setDetail(!detail); setCurrentIdx(currentSlide1)}} className={'absolute  text-[#FAD6A5] z-20   flex flex-col items-center justify-center text-center w-[100%] h-[100%] hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100 '}>
      
         <h3 className={'text-3xl '}>{productImage[currentSlide1].name}</h3>
         <p className='text-xl'>{productImage[currentSlide1].price}</p>
         </div>                
-        <Image src={productImage[currentSlide1].url} className={` prodimg custom-img img bg-gradient-to-b from-black `} width={200} height={400} alt='1'></Image>
+        <Image src={productImage[currentSlide1].url} className={` prodimg custom-img img bg-gradient-to-b from-black  `} width={200} height={400} alt='1'></Image>
                
       </div>
-      <div  onClick={() =>{ setDetail(!detail); setCurrentIdx(currentSlide2)}} ref={divRef2} className={'max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md md:mx-[10px] sm:m-[1%] hp:mx-auto  grow-1  productImage'}>            
+
+
+      <div  onClick={() =>{ setDetail(!detail); setCurrentIdx(currentSlide2)}} ref={divRef2} className={'max-w-[200px] max-h-[500px]  border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md md:mx-[10px] sm:m-[1%] hp:mx-auto hp:mx-[10px]  grow-1  productImage'}>            
     
-      <div className={`absolute text-[#FAD6A5] z-20   flex flex-col items-center justify-center text-center w-[100%] h-[100%]  hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100  `}>
+      <div className={`absolute text-[#FAD6A5] z-20   flex flex-col items-center justify-center text-center w-[100%] h-[100%]   hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100  `}>
       <h3 className={'text-3xl'}>{productImage[currentSlide2].name}</h3>
         <p className='text-xl'>{productImage[currentSlide2].price}</p>
       </div>
         <Image src={productImage[currentSlide2].url} className={` prodimg custom-img img bg-gradient-to-b from-black `} width={200} height={400} alt='2'></Image>
       </div>
       
-      <div ref={divRef3} className={'max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md unset-img sm:m-[1%] hp:hidden sm:inline-flex grow-1   productImage'}>  {
+      <div ref={divRef3} className={'max-w-[200px] max-h-[500px] border-2 border-black rounded-2xl bg-black overflow-hidden shadow-black shadow-md unset-img sm:m-[1%] sm:inline-flex grow-1   productImage'}>  {
 
       }    
       <div  onClick={() =>{ setDetail(!detail); setCurrentIdx(currentSlide3)}} className={`absolute text-[#FAD6A5] z-20   flex flex-col items-center justify-center text-center w-[100%] h-[100%]  hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100`}>
@@ -402,7 +406,7 @@ let content = null
 
       </div>
 
-      <div className='flex justify-evenly mt-10 hp:mt-0'>
+      <div className='flex justify-evenly mt-10 hp:mt-0 hp1:my-[50px]'>
             <div ref={rdr1} onClick={handleClick1} className='bg-[#FAD6A5] h-[15px] w-[15px] rounded-full shadow-black shadow-sm hover:bg-[#AA8B56] hover:border hover:border-[#FAD6A5] active:after:bg-bg-[#AA8B56] cursor-pointer'></div>
             <div ref={rdr2} onClick={handleClick2} className='bg-[#FAD6A5] h-[15px] w-[15px] rounded-full shadow-black shadow-sm hover:bg-[#AA8B56] hover:border hover:border-[#FAD6A5] active:after:bg-bg-[#AA8B56] cursor-pointer'></div>
             <div ref={rdr3} onClick={handleClick3} className='bg-[#FAD6A5] h-[15px] w-[15px] rounded-full shadow-black shadow-sm hover:bg-[#AA8B56] hover:border hover:border-[#FAD6A5] active:after:bg-bg-[#AA8B56] cursor-pointer'></div>
