@@ -41,7 +41,7 @@ export default function Home() {
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </Head>
      
-     <div class="scroll  scroll-smooth  " ref={scrollY2} onScroll={handleScroll} style={{scrollBehavior:'smooth'}}>
+     <div className="scroll  scroll-smooth  " ref={scrollY2} onScroll={handleScroll} style={{scrollBehavior:'smooth'}}>
     
      
      <Header scrollPosition={scrollPosition}  class="scroll scroll-smooth " ref={scrollY2} onScroll={handleScroll} style={{scrollBehavior:'smooth'}}/>

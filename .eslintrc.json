@@ -3,12 +3,13 @@
       "es2021": true,
       "node": true
   },
-  "extends": [
-      "airbnb-base"
-  ],
-  "parserOptions": {
-      "ecmaVersion": 2020
-  },
+  
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module",
+        "allowImportExportEverywhere": true
+    },
+  
   "rules": {
       "no-console": "off",
       "quotes": [2, "double", { "avoidEscape": true }],

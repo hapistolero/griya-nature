@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { gsap } from 'gsap';
-import ScrollToPlugin  from 'gsap/ScrollToPlugin';
+import { gsap } from 'gsap/dist/gsap';
+import ScrollToPlugin  from 'gsap/dist/ScrollToPlugin';
 
 gsap.registerPlugin(ScrollToPlugin);
 
