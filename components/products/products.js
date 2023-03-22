@@ -338,7 +338,7 @@ const rdr5 = useRef(null);
     }
    
 let content = null
-    if(sizeX <= 360 ){
+    if(sizeX <= 577 ){
       
       
       content =
