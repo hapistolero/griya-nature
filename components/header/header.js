@@ -59,7 +59,7 @@ export default function Header ({scrollPosition}){
       const handleResizeX = () => {
         setSizeX(window.innerWidth)
         setSizeY(window.innerHeight)
-        if (sizeX >640) {
+        if (sizeX >767) {
           ulRef.current.classList.remove('ham')
         }else{
           ulRef.current.classList.add('ham')
@@ -210,7 +210,7 @@ console.log(b)
                 }
                
                 .ham{
-                  transform:translateX(100%);
+                  transform:translateX(-100%);
                   transition: transform 1s ease-in-out;
                 }
 
@@ -240,23 +240,11 @@ console.log(b)
                     }
                   }
 
-                  @media screen and (max-width:609px) {
-                    .ham{
-                      transform:translateX(0%);
-                      transition: transform 1s ease-in-out;
-                      margin-left:0;
-                  
-                    }
-
-                    
-    
-                    .ham.click4{
-                      transform:translateX(10%);
-                    
-                    }
+                  @media screen and (min-width:641px){
 
                     .ham2{
-                      transform:translateX(0%);
+                      transform:translate(-100%);
+                      margin-left:0px !important;
                       transition: transform 1s ease-in-out;
                   
                     }
@@ -264,7 +252,77 @@ console.log(b)
                     
     
                     .ham2.click5{
-                      transform:translateX(10%);
+                      transform:translate(0%);
+                      margin-left:0px !important;
+                      transition: transform 1s ease-in-out;
+                  
+                      
+                    
+                    }
+
+                  }
+
+
+
+                  @media screen and (min-width:641px){
+                    
+                    
+
+                    .ham2{
+                      transform:translate(-100%);
+                      margin-left:0px !important;
+                      transition: transform 1s ease-in-out;
+                  
+                    }
+
+                    
+    
+                    .ham2.click5{
+                      transform:translate(0%);
+                      margin-left:0px !important;
+                      transition: transform 1s ease-in-out;
+                  
+                      
+                    
+                    }
+                    .ham{
+                      transform:translate(-100%);
+                      margin-left:0px !important;
+                  
+                    }
+
+                    
+    
+                    .ham.click4{
+                      transform:translate(0%);
+                      
+                    }
+                  }
+
+                  @media screen and (min-width:361px) {
+                    .ham{
+                      transform:translate(-100%);
+                      margin-left:0px !important;
+                  
+                    }
+
+                    
+    
+                    .ham.click4{
+                      transform:translate(0%);
+                      
+                    }
+
+                    .ham2{
+                      
+                      transition: transform 1s ease-in-out;
+                  
+                    }
+
+                    
+    
+                    .ham2.click5{
+                      transform:translateX(0%);
                     
                     }
                   }
@@ -272,13 +330,12 @@ console.log(b)
                   @media screen and (max-width: 360px) {
                     .ham{
                       right:0;
-                      transform:translateX(100vw);
-                      transition: transform 1s ease-in-out;
+                      
                     }
     
                     .ham.click4{
                       
-                      transform:translateX(50vw);
+                      
                     }
                   }
 

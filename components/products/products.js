@@ -473,7 +473,7 @@ let content = null
     return (
 <>    
         
-        <div id='products' className='relative xl:top-[-650px] md:top-[-280px] sm:top-[-270px] hp:top-[-300px] -z-20 w-[100%] max-h-fit bg-[rgb(57,81,68)]  xl:md:p-[20%] md:p-[0px] xl:mt-[260vh] sm:mt-[180px] hp:top-[-200px]  productText border-white '>
+        <div id='products' className='relative xl:top-[-650px] md:top-[-280px] sm:top-[-270px] hp:top-[-300px] -z-20 w-[100%] max-h-fit bg-[rgb(57,81,68)]  xl:md:p-[20%] md:p-[0px] xl:mt-[260vh] md:mt-[calc(100%)] sm:mt-[180px] hp:top-[-200px]  productText border-white '>
         <h2 className='text-center text-4xl mb-12 text jt  text-[#FAD6A5]  '>Products</h2>
          {content}
           

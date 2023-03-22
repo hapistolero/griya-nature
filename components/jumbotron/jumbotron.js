@@ -44,7 +44,7 @@ export default function Jumbotron () {
 
   return (
     <>
-    <div id="jumboTron" name="jumboTron" className={`top-0 absolute max-w-[100%] sm:max-h-[90vh]  bg-gradient-to-r from-black  bg-blend-multiply    hp:bg-center hp:max-h-fit md:bg-[left_bottom_70%] sm:bg-[left_bottom_60%] xl:bg-[left_bottom_60%] hp:h-[100%] hp:bg-fixed hp:relative backgroundImage md:h-[100vh]  xl:mb-[113vh] md:mb-[0vh]  md:h-fit xl:pb-[100vh] overflow-hidden scroll-mt-10 bgp  pClear  border-white  `} style={
+    <div id="jumboTron" name="jumboTron" className={`top-0 absolute max-w-[100%] sm:max-h-[90vh]  md:bg-gradient-to-r  md:from-black  md:bg-blend-multiply    hp:bg-center hp:max-h-fit md:bg-[left_bottom_70%] sm:bg-[left_bottom_60%] xl:bg-[left_bottom_60%] hp:h-[100%] hp:bg-fixed hp:relative backgroundImage md:h-[100vh]  xl:mb-[113vh] md:mb-[0vh]  md:h-fit xl:pb-[120vh] md:pb-[100vh] sm:pb-[100vh] overflow-hidden scroll-mt-10 bgp  pClear  border-white  `} style={
         {backgroundImage: ` url(${backgroundImage})`,
         backgroundSize: "cover",       
         transition: "background-image 0.5s ease-in-out",
@@ -89,15 +89,24 @@ export default function Jumbotron () {
         
     }
       
-      @media only screen and (max-width:768px){
+      @media only screen and (min-width:768px){
         .j {
           background:  linear-gradient(to left, transparent 0%, black 80%);
        
       
       }
-     
+    
       }
-      @media only screen and (max-width:360px){
+
+      @media screen and (min-width:640px){
+        .j {
+          background:  linear-gradient(to left, transparent 0%, black 80%) !important;
+       
+      
+      }
+    
+      }
+      @media screen and (min-width:360px ){
         .j {
         background: linear-gradient(to bottom, transparent 40%, black 100%);
        

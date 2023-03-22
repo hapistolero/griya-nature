@@ -46,16 +46,16 @@ export default function Start({scrollPosition}){
   })
     return(
         <>
-        <div id='start' className={`xl:relative xl:top-[1100px]  bg-gradient-to-b from-[#395144] via-[#4E6C50] to-[#395144]  md:bottom-[-30px] md:mb-[5%] sm:relative sm:top-[50px] sm:max-h-[80vh] hp:bottom-[-50px] xl:bottom-[0px] h-[100%]   xl:bg-white landscape:max-h-[1000vh] landscape:mb-[0px] mbAdd  divCont`}>
-        <div className='xl:relative  '>
-            <h2 className='text-center text-[#FAD6A5] jt md:text-[60px] sm:text-[50px] underline hp:text-[30px] '>Lets Gets Start</h2>
-            <div className='grid grid-cols-2 '>
-            <div className='absolute max-w-full max-h-fit flex sm:translate-x-[-15px] hp1:translate-x-[15vw] sm:translate-x-[-30px]  hp:flex-col sm:flex-row '>
-                <div className='relative  sm:w-[50vw] xl:h-[80vh]   bottom-[200px] left-[50px] hp:w-[100%] hp:h-fit hp:bottom-[50px] divTeko'>
+        <div id='start' className={`xl:relative xl:top-[1100px]  bg-gradient-to-b from-[#395144] via-[#4E6C50] to-[#395144]  md:bottom-[-30px] md:mb-[5%] sm:relative sm:top-[50px] sm:max-h-[80vh]  hp1:bottom-[-200px] hp:bottom-[-50px] xl:bottom-[0px] h-[100%]   xl:bg-white landscape:max-h-[1000vh] hp2:mb-[100vh] hp1:mb-[30vh] sm:block   hp1:flex hp1:flex-col hp1:items-center hp1:justify-center sm:mb-[100vh] sm:pr-0 hp1:  landscape:mb-[0px] mbAdd  divCont`}>
+        <div className='xl:relative  hp2:mb-[60vh]  '>
+            <h2 className='text-center text-[#FAD6A5] jt md:text-[60px] sm:text-[50px] underline hp:text-[30px] hp1:text-center '>Lets Gets Start</h2>
+            <div className='grid grid-cols-[50%_50%] md:content-center hp1:flex hp1:justify-content  md:mx-[2rem] hp1:left-[0] '>
+            <div className='absolute max-w-full max-h-fit flex sm:translate-x-[-20px] hp1:translate-x-[calc(-2vh-15%)] sm:translate-x-[-30px]  hp:flex-col sm:flex-row '>
+                <div className='relative  sm:w-[50vw] xl:h-[80vh]  basis-[50%]   bottom-[200px] hp:left-[40px] md:w-[100%] md:h-[100%] hp:w-[100%] hp:h-fit hp:bottom-[50px] hp1:  md:content-center divTeko'>
                 <Image className='prodimg custom-img' src='/cta/teko.svg' layout="contain" width={1000} height={1000} objectFit='cover'></Image>
                 
                 </div>
-                <div className='sm:w-[50vw] hp:w-[100%] sm:mr-[25px] '>
+                <div className='sm:w-[50vw] hp:w-[100%]  sm:mr-[25px] '>
                   <h3 className='xl:md:text-4xl jt text-[#FAD6A5] md:text-3xl  xl:md:p-11 sm:text-2xl hp:text-lg hp:text-center sm:text-left'>
                   You can start shoping in your favorite marketplace.
                   </h3>
