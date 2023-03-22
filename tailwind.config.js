@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode:'jit',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -14,7 +15,9 @@ module.exports = {
       },     
      screens: {
       'hp':'360px',
-      'hp1':'609px'
+      'hp1':'361px',
+      'hp2':'577px',
+     
      }
     },
    

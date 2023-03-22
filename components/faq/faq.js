@@ -55,9 +55,9 @@ export default function Faq({scrollPosition}) {
     return(
         <>
         
-        <div id='faq' className='xl:relative faq  bg-contain     max-w-[100%]  md:max-h-[130vh] sm:max-h-[120vh]  hp:h-[120vh] xl:mb-[0vh]  sm:h-[50vh]  xl:pb-[250vh] md:pb-[140vh] sm:pb-[130vh] pAdd  divFaq ' >
+        <div id='faq' className='xl:relative faq  bg-contain     max-w-[100%]  md:max-h-[150vh] sm:max-h-[120vh]  hp:h-[120vh] xl:mb-[0vh]  sm:h-[50vh]  xl:pb-[250vh]  md:pb-[70rem]  sm:pb-[130vh] pAdd  divFaq  ' >
               <h2 className='jt text-center text-[#FAD6A5] p-[50px] text-[40px] h-fit  '>FAQ</h2>
-            <div className='relative bottom-[3%] bg-contain       grid grid-cols-2 gap-[10%] px-7 py-5 xl:pb-0  landscape:pb-[50vh] xl:pb-[0vh] xl:bg-none landscape:bg-[length:550px_100vw] absolute   '>
+            <div className='relative bottom-[3%] bg-contain       grid grid-cols-2 gap-[10%] px-7 py-5 xl:pb-0  landscape:pb-[50vh] xl:pb-[0vh]  xl:bg-none landscape:bg-[length:550px_100vw] absolute border-white   '>
               <div  onClick={() => setSelectedFaq(!selectedFaq)} className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
               <div onClick={() => setSelectedFaq(!selectedFaq)} className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105 transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
               <div onClick={() => setSelectedFaq(!selectedFaq)} className='border border-1 border-[#FAD6A5] text-[#FAD6A5] p-[12%] text-center jt rounded-lg text-2xl hover:shadow-md cursor-pointer hover:shadow-[#FAD6A5] hover:scale-105  transition-transform ease-in-out duration-500 scaleUp'>How to Buy?</div>
@@ -155,8 +155,12 @@ export default function Faq({scrollPosition}) {
                         transform: translateX(100%);
                         transition: opacity 1s ease-in-out, transform 1s ease-in-out;
                     }
-
-                    
+                   
+                    @media screen and (min-width: 760px){
+                      .pAdd{
+                        z-index:20 !important;
+                      }
+                    }
                       @media screen and (height: 276px) {
                         .pAdd{
                           padding-bottom: 290vh !important;

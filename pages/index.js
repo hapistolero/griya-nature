@@ -51,7 +51,7 @@ export default function Home() {
       <Benefits scrollPosition={scrollPosition}></Benefits>                                      
       <ProductsComponent scrollPosition={scrollPosition}/>
      <Testi scrollPosition={scrollPosition}/> 
-     <div  className='xl:absolute xl:h-fit md:h-[1300px] sm:h-[1300px] xl:top-[4300px] '>
+     <div  className='xl:absolute xl:h-fit md:h-fit  sm:h-[1300px] xl:top-[4300px] border border-white '>
      <About className={``}/>      
       <Faq scrollPosition={scrollPosition}/>       
      </div>           
