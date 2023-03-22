@@ -51,6 +51,18 @@ export default function Header ({scrollPosition}){
       const handleScroll = () => {
         setScrollY(scrollPosition);
 
+        if (window.innerWidth>=768) {
+          console.log('hello')
+          ulRef.current.classList.remove('ham')
+          ulRef.current.classList.remove('ham2')
+        
+        }else{
+          console.log('hello')
+          ulRef.current.classList.add('ham')
+          ulRef.current.classList.add('ham2')
+         
+        }    
+
         
       };
 
@@ -59,18 +71,22 @@ export default function Header ({scrollPosition}){
       const handleResizeX = () => {
         setSizeX(window.innerWidth)
         setSizeY(window.innerHeight)
-        if (sizeX >767) {
-          ulRef.current.classList.remove('ham')
-        }else{
-          ulRef.current.classList.add('ham')
-        }        
+       
+       
+        
+        
         
       }
 
-      
-      if(window.innerHeight > 332){
-        
+     
+
+      if(window.innerWidth >= 768){
         handleScroll();
+      }    
+
+      
+      if(window.innerHeight > 332 ){
+          
         
       }else{
         
@@ -104,12 +120,20 @@ export default function Header ({scrollPosition}){
     let fntli = 20; 
     let x = sizeX;
 
+   
+
   
-    if(sizeX<1280){     
+    if(sizeX<1280){  
+      
       b =  -552-(-scrollY);   
    
+
+      if(sizeX<768){
+b =0;
+      }
+     
      }
-    if(sizeX < 645){
+    if(sizeX <= 645){
       console.log('cok')
       a= 0
     c= 0
@@ -139,7 +163,7 @@ export default function Header ({scrollPosition}){
          }
 
          if(sizeX < 769){
-          c=12
+          c=12;
           console.log('kontol')
          }
         
@@ -169,7 +193,7 @@ console.log(b)
                
                 }}>  
                 {/* flex justify-start fixed top-[0] max-w-2xl max-h-20 md:flex hp:hidden */}
-                 <ul ref={ulRef} className={` order-1 flex xl:justify-start xl:m-0 xl:p-0  fixed xl:left-[20vh]   max-w-fit md:max-h-20 xl:top-[0px]   md:bg-[#395144]  text-[20px] md:h-[72px] pt-[00px]  text-[#FAD6A5] jt z-50  md:shadow-black md:shadow-sm  md:flex-row hp:flex-col hp:top-[50px]  md:top-[0px] md:ml-[0%]  hp:ml-[50%] hp:ml-[70%] sm:ml-[70%] hp:bg-black md:h-fit md:w-fit hp:h-fit hp:w-[200px] hp:px-[50px] md:text-left hp:text-center  ham ham2`}
+                 <ul ref={ulRef} className={` order-1 flex xl:justify-start xl:m-0 xl:p-0  fixed xl:left-[20vh]  max-w-fit md:max-h-20 xl:top-[0px]   md:bg-[#395144]  text-[20px] md:h-[72px] pt-[00px]  text-[#FAD6A5] jt z-50  md:shadow-black md:shadow-sm  md:flex-row hp:flex-col hp:top-[50px]  md:top-[0px] md:ml-[0%]  hp:bg-black md:h-fit md:w-fit hp:h-fit hp:w-[200px] hp:px-[50px] md:text-left hp:text-center  ham ham2`}
              style={{
                  left: `${b}px`,
                  
@@ -212,6 +236,8 @@ console.log(b)
                 .ham{
                   transform:translateX(-100%);
                   transition: transform 1s ease-in-out;
+                  margin-left:0px !important;
+                     
                 }
 
                 .ham.click4{
@@ -229,9 +255,9 @@ console.log(b)
                 
                   
 
-                  @media screen and (max-width: 640px) {
+                  @media screen and (min-width: 640px) {
                     .ham{
-                      transform:translateX(100%);
+                      transform:translateX(0%);
                       transition: transform 1s ease-in-out;
                     }
     
@@ -240,10 +266,71 @@ console.log(b)
                     }
                   }
 
-                  @media screen and (min-width:641px){
+                  @media screen and (min-width:645px){
+                    @keyframes showUp {
+                      from {opacity: 0;
+                       ;
+                      }
+                      to {opacity: 1;
+                        }
+                    }
+                    
+                    .ham{    
+                                 
+                           display:none;
+                      transform: translate(-100%) !important;
+                    margin-left:0px !important;
+                     
+                      transition: display 2s ease-in-out;
+                      
+                    }
+
+    
+                    .ham.click4{
+                      animation-name:showUp;
+                      animation-duration:2s;
+                      display:flex;
+                    
+                      transform: translate(0%); 
+                                    
+                     
+                    }
 
                     .ham2{
+                      margin-left:0px !important;
                       transform:translate(-100%);
+                      transition: transform 1s ease-in-out;
+                    }
+    
+                    .ham2.click5{
+                      transform:translate(0%);
+                    }
+                  
+                  }
+
+                  @media screen and (min-width:768px){
+
+                    .ham2{
+                      transform:translate(-100%) !important;
+                      margin-left:0px !important;
+                      transition: transform 1s ease-in-out;
+                      display:flex;
+                  
+                    }
+
+                    
+    
+                    .ham2.click5{
+                      transform:translate(-0%) !important;
+                      margin-left:0px !important;
+                      transition: transform 1s ease-in-out;
+                  
+                      
+                    
+                    }
+
+                    .ham{
+                      transform:translate(-100%) !important;
                       margin-left:0px !important;
                       transition: transform 1s ease-in-out;
                   
@@ -251,42 +338,19 @@ console.log(b)
 
                     
     
-                    .ham2.click5{
-                      transform:translate(0%);
-                      margin-left:0px !important;
-                      transition: transform 1s ease-in-out;
-                  
+                    .ham.click4{
+                      transform:translate(0%) !important;
                       
-                    
                     }
 
                   }
 
 
 
-                  @media screen and (min-width:641px){
-                    
-                    
-
-                    .ham2{
-                      transform:translate(-100%);
-                      margin-left:0px !important;
-                      transition: transform 1s ease-in-out;
+                  @media screen and (min-width:641px){                                                                                  
                   
-                    }
-
-                    
-    
-                    .ham2.click5{
-                      transform:translate(0%);
-                      margin-left:0px !important;
-                      transition: transform 1s ease-in-out;
-                  
-                      
-                    
-                    }
                     .ham{
-                      transform:translate(-100%);
+                      transform:translate(-0%) !important;
                       margin-left:0px !important;
                   
                     }
@@ -294,7 +358,43 @@ console.log(b)
                     
     
                     .ham.click4{
-                      transform:translate(0%);
+                      transform:translate(0%) !important;
+                      
+                    }
+                  }
+
+
+                  @media screen and (min-width:645px){
+                    
+                    
+
+                    .ham2{
+                      transform:translateX(-100%) !important;
+                      margin-left:0px !important;
+                      transition: transform 1s ease-in-out;
+                  
+                    }
+
+                    
+    
+                    .ham2.click5{
+                      transform:translateX(0%) !important;
+                      margin-left:0px !important;
+                      transition: transform 1s ease-in-out;
+                  
+                      
+                    
+                    }
+                    .ham{
+                      transform:translate(-0%) !important;
+                      margin-left:0px !important;
+                  
+                    }
+
+                    
+    
+                    .ham.click4{
+                      transform:translate(0%) !important;
                       
                     }
                   }
