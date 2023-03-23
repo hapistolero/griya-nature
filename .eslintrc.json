@@ -2,12 +2,23 @@
   "env": {
       "es2021": true,
       "node": true
-  },
-  
-    "parser": "babel-eslint",
-    "parserOptions": {
+  },      
+  "parser": "@babel/eslint-parser",  
+  "settings": {
+    "react": {
+        "version": "detect"
+    }
+},
+
+    "parserOptions": {        
+      "babelOptions": {
+        "presets": ["@babel/preset-react"]
+     },  
+      
+      "ecmaVersion": 2020,
         "sourceType": "module",
-        "allowImportExportEverywhere": true
+        "allowImportExportEverywhere": true,
+        "requireConfigFile": false       
     },
   
   "rules": {
@@ -16,7 +27,7 @@
       "no-underscore-dangle":"off",
       "linebreak-style": ["error", "windows"],
       "indent": ["error", 4],
-      "semi": [2, "never"]
+      "semi": [2, "never"]     
 
   }
   
