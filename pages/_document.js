@@ -9,6 +9,7 @@ export default function Document() {
 <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&family=Averia+Serif+Libre:wght@300&family=Pattaya&display=swap" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 
     <Head/>              
       <body className='scroll-smooth' style={{scrollBehavior:'smooth'}}>

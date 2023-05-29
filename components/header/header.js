@@ -27,7 +27,7 @@ export default function Header ({scrollPosition}){
       const scroll = document.querySelector('.scroll')
      handleClickNav()
       
-      gsap.to(scroll, {
+      gsap.to(window, {
         duration: 1,
         scrollTo: { y: target, offsetY: offset }
       });
