@@ -9,7 +9,7 @@ export default function Footer(){
 
     return(
         <>
-        <footer className="w-full h-full flex flex-col bg-black text-[#FAD6A5] text-center mt-[8em] border-b-2 border-[#FAD6A5]">
+        <footer className="w-full h-full flex flex-col bg-black text-[#FAD6A5] text-center  border-b-2 border-[#FAD6A5]">
             <h6 className="text-[1.6em] m-5">Contact</h6>
             <div className="xl:grid xl:grid-cols-3">
             <div className="w-fit h-[calc(100%/3)] flex mx-auto my-6"> 

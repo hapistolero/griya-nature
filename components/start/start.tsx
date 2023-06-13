@@ -29,7 +29,7 @@ export default function Start({scrollPosition}){
 
     return(
         <>
-        <section id='start' className="h-fit w-full flex hp:flex-col text-center text-[#FAD6A5] mb-[2em]  bg-gradient-to-b from-[#395144] via-[#4E6C50] to-[#395144]  ">
+        <section id='start' className="h-fit w-full flex hp:flex-col text-center text-[#FAD6A5] mb-[2em]  bg-gradient-to-b from-[#395144] via-[#4E6C50] to-[#395144]  mb-[8em] ">
                 <h2 className="underline text-[2em] sm:text-[3em]">LETS GET START</h2>
                 
          <div className="h-fit w-full flex hp:flex-col xl:flex-row">

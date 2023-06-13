@@ -8,9 +8,17 @@ import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 
 gsap.registerPlugin(ScrollToPlugin);
 
+interface navProps{
+    page:String
+}
 
 
-export default function Nav() {
+export default function Nav(props:navProps) {
+
+    const {page} = props
+
+    
+    
 
     const [ham , setHamClick] = useState(false)
 
@@ -27,7 +35,7 @@ export default function Nav() {
       },[]);
 return (
     <>
-    <nav className={` sm:w-full  sm:h-fit sm:p-4 hp:h-fit hp:p-4 md:p-5 flex hp:w-[100%]  bg-[#395144] text-[#FAD6A5] fixed z-[9999] border-b-2 border-[#FAD6A5]`}>
+    <nav className={` sm:w-full  sm:h-fit sm:p-4 hp:h-fit hp:p-4 md:p-5 flex hp:w-[101vw]  w-full bg-[#395144] text-[#FAD6A5] fixed z-[9999] border-b-2 border-[#FAD6A5]`}>
 
         <div className="flex md:w-[90%] sm:w-[90%] hp:w-[90%]  xl:w-[25%] ">
         <Image alt="logo" width={50} height={50} src={'/navbar/logo.svg'}/>
@@ -35,13 +43,15 @@ return (
        
         </div>
 
-        <div onClick={()=>setHamClick(!ham)} className={` ${styles.ham} hp:w-[3.5em] sm:w-[4em] sm:static hp:absolute hp:right-0 hp:top-[-0.8em]  hp:h-full hp:p-2 flex flex-col xl:hidden `}>
+        <div onClick={()=>setHamClick(!ham)} className={` ${styles.ham} hp:w-[3.5em] sm:w-[4em] sm:static hp:absolute hp:right-1 hp:top-[-0.8em]  hp:h-full hp:p-2 flex flex-col xl:hidden `}>
             <span className={`${styles.hamNav1} ${ham ? styles.show1 : ''} hp:w-full hp:h-2 bg-[#FAD6A5] rounded-xl` }></span>
             <span className={`${styles.hamNav2} ${ham ? styles.show2 : ''} hp:w-full hp:h-2 bg-[#FAD6A5] rounded-xl my-1`}></span>
             <span className={`${styles.hamNav3}  ${ham ? styles.show3 : ''} hp:w-full hp:h-2 bg-[#FAD6A5] rounded-xl`}></span>
         </div>
+
+        
         <div className={`${styles.ulNav} ${!ham ? styles.show4 : ''} md:w-[25%] xl:w-[75%] md:flex-rows sm:absolute hp:absolute  xl:static xl:bg-transparent hp:bg-black text-center`}>
-            <ul className=" w-full h-full xl:flex xl:flex-row   xl:justify-evenly ">
+        {page === 'landing' ? <ul className=" w-full h-full xl:flex xl:flex-row   xl:justify-evenly ">
                 <li className="p-5 md:p-5  xl:p-2  md:text-[1.1em] px-7 text-[1.2em]"><Link onClick={(e) => handleClick(e, '#jumbotron',9)} href={'#jumbotron'}>Home</Link></li>
                 <li className="p-5 md:p-5  xl:p-2  md:text-[1.1em] px-7 text-[1.2em]"><Link onClick={(e) => handleClick(e, '#benefits',9)} href={'#benefits'}>Benefits</Link></li>
                 <li className="p-5 md:p-5  xl:p-2  md:text-[1.1em] px-7 text-[1.2em]"><Link onClick={(e) => handleClick(e, '#products',70)} href={'#products'}>Products</Link></li>
@@ -50,6 +60,9 @@ return (
                 <li className="p-5 md:p-5  xl:p-2  md:text-[1.1em] px-7 text-[1.2em]"><Link onClick={(e) => handleClick(e, '#faq',90)} href={'#faq'}>Faq</Link></li>
                 <li className="p-5 md:p-5  xl:p-2  md:text-[1.1em] px-7 text-[1.2em]"><Link onClick={(e) => handleClick(e, '#start',100)}href={'#start'}>Lets Go!</Link></li>
             </ul>
+            : null
+             }
+            
         </div> 
 
        

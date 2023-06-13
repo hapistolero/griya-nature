@@ -1,14 +1,12 @@
 import { ReactNode, useEffect, useRef, useState} from 'react'
 import Head from 'next/head'
-import Container from '../components/container';
-import Nav from '../components/header/nav';
 import Jumbo from '../components/jumbotron/jumbotron.tsx';
 import Benefits from '../components/benefits/benefits.tsx';
 import Products from '../components/products/products.tsx'; 
 import Testi from '../components/testi/testi.tsx';
 import About from '../components/about/about.tsx';
-import Start  from '../components/start/start.tsx'
-import Footer from '../components/contact us/contact.tsx';
+import Start  from '../components/start/start.tsx';
+import Layout from '../components/layout';
 
 
 
@@ -59,18 +57,18 @@ export default function Home(props) {
                                                                                                                    
       </div>   */}
 
-      <Container>
+      <Layout page={'landing'}>
 
-        <Nav  />
+       
         <Jumbo />
         <Benefits scrollPosition={scrollPosition}/>
         <Products scrollPosition={scrollPosition} data={data}/>
         <Testi scrollPosition={scrollPosition}/>
         <About scrollPosition={scrollPosition}/>
         <Start scrollPosition={scrollPosition}/>
-        <Footer/>
+       
 
-      </Container>
+      </Layout>
 
 
      

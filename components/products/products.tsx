@@ -27,6 +27,8 @@ export default function Products(props:data ){
     const {data} = props
 
 
+    const router = useRouter()
+
 
     
     
@@ -71,7 +73,7 @@ export default function Products(props:data ){
 
 {data.map((dat,i=1)=>(
     <SwiperSlide className="pb-7 p-2 hover:scale-[1.05] transition-all ">
-            <div id={`section-${i++}`} className={`h-[100%} flex items-center justify-center   ml-2 inline shrink-0  transition-all   hover:cursor-pointer   `}>
+            <div onClick={() => router.push(`/home/${dat.name}`)} id={`section-${i++}`} className={`h-[100%} flex items-center justify-center   ml-2 inline shrink-0  transition-all   hover:cursor-pointer   `}>
             <div    className={`  h-fit w-fit rounded-2xl border border-white overflow-hidden border-lg border-[#FAD6A5] shadow-lg shadow-black bg-black relative hover:shadow-lg hover:shadow-[#FAD6A5] `}>
             <div className={`absolute text-[#FAD6A5] z-20  flex flex-col items-center justify-center text-center w-[100%] h-[100%]    hover:bg-gradient-to-t hover:from-black opacity-0 hover:opacity-100 ease-in-out transition-all rounded-lg `}>
               <h3 className={'text-3xl '}>{dat.name}</h3>
