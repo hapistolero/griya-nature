@@ -13,7 +13,7 @@ interface DetailProps{
 }
 
 export default function productDetails(props:DetailProps){
-    const {product} = props.DetailProps
+    const { product } = props
     const [qty, setQty] = useState(0)
     const [read,setRead] = useState(false)
     const [show, setShow] = useState(false)

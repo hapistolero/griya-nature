@@ -35,7 +35,7 @@ const {addToCartProps} =props
     return(
         <>
            <Layout page='details'>
-           <ProductDetails DetailProps={props}/>
+           <ProductDetails {...props}/>
     
            </Layout>
            

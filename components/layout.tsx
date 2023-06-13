@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from "react";
 import Nav from "./header/nav";
 import Cart from "./cart/cart";
-import Footer from "./contact us/contact.tsx";
+import Footer from "./contact us/contact";
 
 interface propPage{
     children:  ReactNode,
@@ -14,7 +14,7 @@ export default function Layout(props:propPage) {
    
 
     const {children, page}= props
-    console.log(children.props)
+   
 
    
 
