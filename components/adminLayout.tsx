@@ -15,7 +15,7 @@ export default function AdminLayout(props:adminLayoutProps){
             
         
         <div className="mx-auto  overflow-x-hidden w-full h-fit  ">
-            <Nav/>
+            <Nav page={'admin'}/>
           
            <main className='flex  h-fit w-full md:flex-row hp:flex-col'>
             <SideNav/>
