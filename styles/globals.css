@@ -10,7 +10,7 @@
 
 
 
-html {
+/* html {
   position:fixed;
   min-height:100%;  
     overflow-y:hidden;
@@ -31,6 +31,7 @@ body {
   background-color: #395144; 
   
 }
+
 .scroll{
   position: fixed;
   top: 0;
@@ -41,21 +42,41 @@ body {
   overflow-x:hidden;
   scroll-behavior: smooth !important;
 }
-.j {
+ */
+
+/* .j {
   background: url("../public/jumbotron/hero.jpg") no-repeat right, linear-gradient(to left, transparent 50%, black 100%);
   background-position: 0px 50%;
 
   background-size: cover;
   
-}
+} */
 .swiper-pagination-bullet-active {
   background-color: #AA8B56 !important;
  
 }
 
+.swiper-button-prev {
+  color: white !important; 
+}
+
+.swiper-button-next {
+  color: white !important; 
+}
 
 
-.jt{
+
+body{
+  font-family: 'Averia Serif Libre','sans-serif';
+  background-color: #395144; 
+  height:fit-content;
+  
+}
+
+
+
+
+/* .jt{
   font-family: 'Averia Serif Libre'
 }
 
@@ -130,4 +151,4 @@ body {
 }
 
 
-
+ */

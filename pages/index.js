@@ -1,35 +1,30 @@
 import { ReactNode, useEffect, useRef, useState} from 'react'
-import Header from '../components/header/header.js'
-import Jumbotron from '../components/jumbotron/jumbotron.js'
-import Image from 'next/image'
 import Head from 'next/head'
-import Benefits from '../components/benefits/benefit.js'
-import ProductsComponent from '../components/products/products.js'
-import Testi from '../components/testi/testi.js'
-import About from '../components/about/about.js'
-import Faq from '../components/faq/faq.js'
-import Start from '../components/start/start.js'
-import Contact from '../components/contact us/contact.js'
-import Modal from '../components/modalBox/modal.js'
+import Jumbo from '../components/jumbotron/jumbotron.tsx';
+import Benefits from '../components/benefits/benefits.tsx';
+import Products from '../components/products/products.tsx'; 
+import Testi from '../components/testi/testi.tsx';
+import About from '../components/about/about.tsx';
+import Start  from '../components/start/start.tsx';
+import Layout from '../components/layout';
 
-const handleClick = (event) =>{
-  
 
-  
-}
 
-export default function Home() {
-  const scrollY2 = useRef(null)
+export default function Home(props) {
+
+  const {data} = props
+ 
   const [scrollPosition, setScrollPosition] = useState(0);
-
+  
   const handleScroll = () => {
-    setScrollPosition(scrollY2.current.scrollTop)
+    setScrollPosition(window.scrollY)
+    console.log(scrollPosition)
   }
 
   useEffect(() =>{
     
     window.addEventListener('scroll', handleScroll)
-  },[])
+  },[scrollPosition])
  
   return (
     
@@ -40,10 +35,10 @@ export default function Home() {
 <meta http-equiv="Content-Language" content="en"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </Head>
-     
+{/*      
      <div className="scroll  scroll-smooth  " ref={scrollY2} onScroll={handleScroll} style={{scrollBehavior:'smooth'}}>
     
-     
+    
      <Header scrollPosition={scrollPosition}  class="scroll scroll-smooth " ref={scrollY2} onScroll={handleScroll} style={{scrollBehavior:'smooth'}}/>
     
       
@@ -58,10 +53,24 @@ export default function Home() {
 <Start scrollPosition={scrollPosition}/>          
 <Contact/>
 
-<div></div>
 
                                                                                                                    
-      </div>  
+      </div>   */}
+
+      <Layout page={'landing'}>
+
+       
+        <Jumbo />
+        <Benefits scrollPosition={scrollPosition}/>
+        <Products scrollPosition={scrollPosition} data={data}/>
+        <Testi scrollPosition={scrollPosition}/>
+        <About scrollPosition={scrollPosition}/>
+        <Start scrollPosition={scrollPosition}/>
+       
+
+      </Layout>
+
+
      
      
                                                              
@@ -71,6 +80,21 @@ export default function Home() {
 
   
 }
+
+export async function getServerSideProps(ctx) {
+
+  const res = await fetch("http:localhost:3000/api/products")
+ 
+    const data=  await res.json()
+   
+    return {
+      props: {
+        data:data
+        
+      }
+    }
+  }
+
 
 
 
